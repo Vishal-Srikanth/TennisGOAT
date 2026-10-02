@@ -25789,5 +25789,132 @@
         "Significant (p < 0.05)": false
       }
     ]
+  },
+  "surface_adaptability_score": {
+    "method": "Non-ML custom composite score from unweighted variance of surface win rates around overall win rate and weakest-surface win rate.",
+    "period": "2005 onward, restricted to player-match rows with a known winner and Clay, Grass, or Hard surface.",
+    "formula": {
+      "surface_deviation_variance": "((Clay rate - overall rate)^2 + (Grass rate - overall rate)^2 + (Hard rate - overall rate)^2) / 3",
+      "parity_score": "100 * (1 - sqrt(surface_deviation_variance))",
+      "surface_adaptability_score": "0.60 * parity_score + 0.40 * weakest_surface_win_rate * 100"
+    },
+    "players": {
+      "Roger Federer": {
+        "overall_matches_played": 576,
+        "overall_wins": 459,
+        "win_rate_overall": 0.796875,
+        "win_rate_overall_percent": 79.6875,
+        "surfaces": {
+          "Clay": {
+            "matches_played": 104,
+            "wins": 71,
+            "win_rate": 0.6826923076923077,
+            "win_rate_percent": 68.26923076923077
+          },
+          "Grass": {
+            "matches_played": 98,
+            "wins": 82,
+            "win_rate": 0.8367346938775511,
+            "win_rate_percent": 83.6734693877551
+          },
+          "Hard": {
+            "matches_played": 374,
+            "wins": 306,
+            "win_rate": 0.8181818181818182,
+            "win_rate_percent": 81.81818181818183
+          }
+        },
+        "weakest_surface": "Clay",
+        "win_rate_weakest": 0.6826923076923077,
+        "surface_deviation_variance": 0.005026820973226091,
+        "parity_score": 92.9099922614809,
+        "surface_adaptability_score": 83.05368766458085
+      },
+      "Rafael Nadal": {
+        "overall_matches_played": 415,
+        "overall_wins": 301,
+        "win_rate_overall": 0.7253012048192771,
+        "win_rate_overall_percent": 72.53012048192771,
+        "surfaces": {
+          "Clay": {
+            "matches_played": 163,
+            "wins": 139,
+            "win_rate": 0.852760736196319,
+            "win_rate_percent": 85.2760736196319
+          },
+          "Grass": {
+            "matches_played": 38,
+            "wins": 23,
+            "win_rate": 0.6052631578947368,
+            "win_rate_percent": 60.526315789473685
+          },
+          "Hard": {
+            "matches_played": 214,
+            "wins": 139,
+            "win_rate": 0.6495327102803738,
+            "win_rate_percent": 64.95327102803739
+          }
+        },
+        "weakest_surface": "Grass",
+        "win_rate_weakest": 0.6052631578947368,
+        "surface_deviation_variance": 0.012131976537668355,
+        "parity_score": 88.9854748002157,
+        "surface_adaptability_score": 77.6018111959189
+      },
+      "Novak Djokovic": {
+        "overall_matches_played": 550,
+        "overall_wins": 419,
+        "win_rate_overall": 0.7618181818181818,
+        "win_rate_overall_percent": 76.18181818181819,
+        "surfaces": {
+          "Clay": {
+            "matches_played": 128,
+            "wins": 90,
+            "win_rate": 0.703125,
+            "win_rate_percent": 70.3125
+          },
+          "Grass": {
+            "matches_played": 58,
+            "wins": 44,
+            "win_rate": 0.7586206896551724,
+            "win_rate_percent": 75.86206896551724
+          },
+          "Hard": {
+            "matches_played": 364,
+            "wins": 285,
+            "win_rate": 0.782967032967033,
+            "win_rate_percent": 78.2967032967033
+          }
+        },
+        "weakest_surface": "Clay",
+        "win_rate_weakest": 0.703125,
+        "surface_deviation_variance": 0.00130079581766364,
+        "parity_score": 96.39334529284595,
+        "surface_adaptability_score": 85.96100717570756
+      }
+    },
+    "summary": [
+      {
+        "Player Name": "Roger Federer",
+        "Weakest Surface": "Clay",
+        "Weakest Surface Win Rate (%)": 68.27,
+        "Parity Score": 92.91,
+        "Final Surface Adaptability Score (0-100)": 83.05
+      },
+      {
+        "Player Name": "Rafael Nadal",
+        "Weakest Surface": "Grass",
+        "Weakest Surface Win Rate (%)": 60.53,
+        "Parity Score": 88.99,
+        "Final Surface Adaptability Score (0-100)": 77.6
+      },
+      {
+        "Player Name": "Novak Djokovic",
+        "Weakest Surface": "Clay",
+        "Weakest Surface Win Rate (%)": 70.31,
+        "Parity Score": 96.39,
+        "Final Surface Adaptability Score (0-100)": 85.96
+      }
+    ]
   }
 }
