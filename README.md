@@ -46,23 +46,23 @@ All rates use eligible observations for the stated player, period, surface, or m
 
 | KPI | Formula | Interpretation |
 |---|---|---|
-| **Match win rate** | `100 × verified wins / matches with known outcomes` | Share of charted matches won where the outcome can be established |
-| **Point win rate** | `100 × points won / eligible points played` | Share of observed points won |
-| **Service-point win rate** | `100 × service points won / service points played` | Success when serving |
-| **Return-point win rate** | `100 × return points won / return points played` | Success when receiving |
-| **First-serve-in rate** | `100 × first serves in / service points played` | First-serve consistency |
-| **First-serve points won** | `100 × first-serve points won / first-serve points played` | Effectiveness behind the first serve |
-| **Second-serve points won** | `100 × second-serve points won / second-serve points played` | Effectiveness behind the second serve |
-| **Ace rate** | `100 × aces / eligible service points` | Aces relative to service-point exposure |
-| **Double-fault rate** | `100 × double faults / service points played` | Service errors relative to service-point exposure |
-| **Break-point conversion** | `100 × return break points won / return break-point opportunities` | Success on opportunities to break serve |
-| **Service hold rate** | `100 × completed service games held / completed service games` | Ability to protect service games; excludes tiebreaks |
-| **Return break rate** | `100 × completed return games won / completed return games` | Ability to break opponents; excludes tiebreaks |
-| **Break-point save rate** | `100 × break points saved / break points faced` | Success defending break points |
-| **Tiebreak win rate** | `100 × tiebreaks won / tiebreaks played` | Success in completed tiebreaks |
-| **Deciding-set win rate** | `100 × deciding sets won / deciding sets played` | Success in matches reaching a deciding set |
-| **Surface win rate** | `100 × verified wins on surface / known outcomes on surface` | Sample win rate on hard, clay, or grass |
-| **Head-to-head win rate** | `100 × verified wins versus rival / known outcomes versus rival` | Sample success against one of the other Big Three |
+| **Match win rate** | $100 \times \frac{\text{verified wins}}{\text{matches with known outcomes}}$ | Share of charted matches won where the outcome can be established |
+| **Point win rate** | $100 \times \frac{\text{points won}}{\text{eligible points played}}$ | Share of observed points won |
+| **Service-point win rate** | $100 \times \frac{\text{service points won}}{\text{service points played}}$ | Success when serving |
+| **Return-point win rate** | $100 \times \frac{\text{return points won}}{\text{return points played}}$ | Success when receiving |
+| **First-serve-in rate** | $100 \times \frac{\text{first serves in}}{\text{service points played}}$ | First-serve consistency |
+| **First-serve points won** | $100 \times \frac{\text{first-serve points won}}{\text{first-serve points played}}$ | Effectiveness behind the first serve |
+| **Second-serve points won** | $100 \times \frac{\text{second-serve points won}}{\text{second-serve points played}}$ | Effectiveness behind the second serve |
+| **Ace rate** | $100 \times \frac{\text{aces}}{\text{eligible service points}}$ | Aces relative to service-point exposure |
+| **Double-fault rate** | $100 \times \frac{\text{double faults}}{\text{service points played}}$ | Service errors relative to service-point exposure |
+| **Break-point conversion** | $100 \times \frac{\text{return break points won}}{\text{return break-point opportunities}}$ | Success on opportunities to break serve |
+| **Service hold rate** | $100 \times \frac{\text{completed service games held}}{\text{completed service games}}$ | Ability to protect service games; excludes tiebreaks |
+| **Return break rate** | $100 \times \frac{\text{completed return games won}}{\text{completed return games}}$ | Ability to break opponents; excludes tiebreaks |
+| **Break-point save rate** | $100 \times \frac{\text{break points saved}}{\text{break points faced}}$ | Success defending break points |
+| **Tiebreak win rate** | $100 \times \frac{\text{tiebreaks won}}{\text{tiebreaks played}}$ | Success in completed tiebreaks |
+| **Deciding-set win rate** | $100 \times \frac{\text{deciding sets won}}{\text{deciding sets played}}$ | Success in matches reaching a deciding set |
+| **Surface win rate** | $100 \times \frac{\text{verified wins on surface}}{\text{known outcomes on surface}}$ | Sample win rate on hard, clay, or grass |
+| **Head-to-head win rate** | $100 \times \frac{\text{verified wins versus rival}}{\text{known outcomes versus rival}}$ | Sample success against one of the other Big Three |
 
 **Denominator discipline matters.** Missing, unavailable, or undefined observations should not silently become zeros. The notebook's `metric_contract` export is the authoritative reference for implemented eligibility rules, exclusions, and calculation details.
 
@@ -71,10 +71,9 @@ All rates use eligible observations for the stated player, period, surface, or m
 A serve-only statistic cannot tell the whole story. Dominance Ratio combines return effectiveness with the proportion of service points the player loses:
 
 
-$$
+```math
 DR = \frac{\text{Return points won}/\text{Return points played}}{1 - (\text{Service points won}/\text{Service points played})}
-
-$$
+```
 
 A value above **1.0** indicates the player wins return points at a higher rate than they lose service points in the measured sample. It is a descriptive measure of point-level dominance, **not** a probability or a causal explanation of winning. Denominator edge cases require explicit handling.
 
@@ -85,20 +84,18 @@ Among reported overall results, Federer records approximately **1.277** and Djok
 The study examines three pressure-related components:
 
 
-$$
+```math
 BP_{save}=\frac{\text{Break points saved}}{\text{Break points faced}},\quad
 TB_{win}=\frac{\text{Tiebreaks won}}{\text{Tiebreaks played}},\quad
 DS_{win}=\frac{\text{Deciding sets won}}{\text{Deciding sets played}}
-
-$$
+```
 
 These dimensions should be interpreted with their **sample sizes**: a strong percentage from a handful of opportunities does not carry the same evidential weight as one from hundreds. The implemented **Clutch Index (CI)** is:
 
 
-$$
+```math
 CI=0.50 BP_{save}+0.30 TB_{win}+0.20 DS_{win}
-
-$$
+```
 
 The component rates are fractions, and the headline CI is calculated only where all three are supported on the declared common eligible cohort. Its 50/30/20 weights are analyst-defined, not empirical measures of mental toughness. Consult `clutch_metrics` and `metric_contract` for event eligibility, exclusions, and denominators. A clutch composite is an analytical convention, not an official tennis statistic.
 
@@ -112,30 +109,27 @@ Performance is compared across **hard, clay, and grass**, separating two questio
 Consistency alone does not mean superiority: a player can be similarly average on all surfaces, while another can be exceptional on two and less successful on a third. The primary **Surface Adaptability Score (SAS)** combines parity with the weakest-surface win rate:
 
 
-$$
+```math
 Parity=100\left(1-\sqrt{\frac{1}{3}\sum_{s\in\{Hard,Clay,Grass\}}(p_s-p)^2}\right)
+```
 
-$$
 
-
-$$
+```math
 SAS=0.60\times Parity+0.40\times(100\min_s p_s)
+```
 
-$$
-
-Here, \(p_s\) is the known-outcome win-rate fraction on surface \(s\), and \(p\) is the pooled win-rate fraction across the three surfaces. All three surfaces are required. The 60/40 blend rewards both consistency and a competitive performance floor; weight sensitivity is reported separately. The `surface_adaptability` export and notebook document its eligibility rules.
+Here, $p_s$ is the known-outcome win-rate fraction on surface $s$, and $p$ is the pooled win-rate fraction across the three surfaces. All three surfaces are required. The 60/40 blend rewards both consistency and a competitive performance floor; weight sensitivity is reported separately. The `surface_adaptability` export and notebook document its eligibility rules.
 
 ### Preference scores: transparent judgments, not discovered truths
 
 The project combines four dimensions into a **balanced preference scenario**:
 
 
-$$
+```math
 S_{balanced}=0.25P+0.25D+0.25C+0.25A
+```
 
-$$
-
-where **P** = observed winning performance, **D** = dominance, **C** = clutch performance, and **A** = surface adaptability, using fixed transformations: \(P=\text{win rate as a fraction}\), \(D=DR/(1+DR)\), \(C=CI\), and \(A=SAS/100\). The displayed score is \(100S_{balanced}\).
+where **P** = observed winning performance, **D** = dominance, **C** = clutch performance, and **A** = surface adaptability, using fixed transformations: $P=\text{win rate as a fraction}$, $D=DR/(1+DR)$, $C=CI$, and $A=SAS/100$. The displayed score is $100S_{balanced}$.
 
 The fixed reference and exact transformations matter: **do not substitute raw percentages or ratios directly into this equation**. See `preference_scores` and `metric_contract` for the implementation.
 
@@ -191,10 +185,9 @@ The notebook also studies **shot-family mix, crosscourt/middle/down-the-line/ins
 **Shot-type and directional diversity** use normalized Shannon entropy on fixed, comparable category sets:
 
 
-$$
+```math
 H=-\frac{\sum_{k=1}^{K}p_k\ln p_k}{\ln K}
-
-$$
+```
 
 This 0–1 index measures variety, **not shot quality**. Court illustrations are schematic depictions of coded zones, not measured ball-tracking coordinates. Tactical evolution is analyzed using four-calendar-year periods anchored to each player's first charted year, with raw, within-surface, and surface-standardized comparisons where supported. It is not an invented innovation or athleticism score.
 
@@ -203,10 +196,9 @@ This 0–1 index measures variety, **not shot quality**. Court illustrations are
 Two **inferential logistic regressions** investigate conditional associations with (a) saving a break point and (b) winning a point in a validated completed tiebreak. Covariates include player, surface, set context, prior-rally length, and a descriptive opponent-strength proxy; the tiebreak model also controls for serving status.
 
 
-$$
+```math
 \operatorname{logit}(p_i)=x_i^T\beta,\qquad OR_{a:b}=\exp(\beta_a-\beta_b)
-
-$$
+```
 
 Match-clustered robust uncertainty accounts for dependence among points in the same match. Six planned player contrasts receive Holm multiple-testing adjustment. These are **retrospective associations, not causal estimates, psychological measurements, or validated match forecasts**. In-sample Brier scores do not constitute out-of-sample predictive validation.
 
