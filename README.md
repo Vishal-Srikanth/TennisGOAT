@@ -1,4 +1,4 @@
-# Who is the GOAT of Tennis? 
+# Who is the GOAT of Tennis?
 ### Federer. Nadal. Djokovic. Three extraordinary careers. One difficult question.
 
 > **What happens when the greatest debate in tennis is examined point by point, rather than decided by a single trophy count?**
@@ -70,9 +70,11 @@ All rates use eligible observations for the stated player, period, surface, or m
 
 A serve-only statistic cannot tell the whole story. Dominance Ratio combines return effectiveness with the proportion of service points the player loses:
 
-\[
+
+$$
 DR = \frac{\text{Return points won}/\text{Return points played}}{1 - (\text{Service points won}/\text{Service points played})}
-\]
+
+$$
 
 A value above **1.0** indicates the player wins return points at a higher rate than they lose service points in the measured sample. It is a descriptive measure of point-level dominance, **not** a probability or a causal explanation of winning. Denominator edge cases require explicit handling.
 
@@ -82,17 +84,21 @@ Among reported overall results, Federer records approximately **1.277** and Djok
 
 The study examines three pressure-related components:
 
-\[
+
+$$
 BP_{save}=\frac{\text{Break points saved}}{\text{Break points faced}},\quad
 TB_{win}=\frac{\text{Tiebreaks won}}{\text{Tiebreaks played}},\quad
 DS_{win}=\frac{\text{Deciding sets won}}{\text{Deciding sets played}}
-\]
+
+$$
 
 These dimensions should be interpreted with their **sample sizes**: a strong percentage from a handful of opportunities does not carry the same evidential weight as one from hundreds. The implemented **Clutch Index (CI)** is:
 
-\[
+
+$$
 CI=0.50 BP_{save}+0.30 TB_{win}+0.20 DS_{win}
-\]
+
+$$
 
 The component rates are fractions, and the headline CI is calculated only where all three are supported on the declared common eligible cohort. Its 50/30/20 weights are analyst-defined, not empirical measures of mental toughness. Consult `clutch_metrics` and `metric_contract` for event eligibility, exclusions, and denominators. A clutch composite is an analytical convention, not an official tennis statistic.
 
@@ -105,14 +111,17 @@ Performance is compared across **hard, clay, and grass**, separating two questio
 
 Consistency alone does not mean superiority: a player can be similarly average on all surfaces, while another can be exceptional on two and less successful on a third. The primary **Surface Adaptability Score (SAS)** combines parity with the weakest-surface win rate:
 
-\[
-Parity=100\left(1-\sqrt{rac{1}{3}\sum_{s\in\{Hard,Clay,Grass\}}(p_s-p)^2}
-ight)
-\]
 
-\[
-SAS=0.60	imes Parity+0.40	imes(100\min_s p_s)
-\]
+$$
+Parity=100\left(1-\sqrt{\frac{1}{3}\sum_{s\in\{Hard,Clay,Grass\}}(p_s-p)^2}\right)
+
+$$
+
+
+$$
+SAS=0.60\times Parity+0.40\times(100\min_s p_s)
+
+$$
 
 Here, \(p_s\) is the known-outcome win-rate fraction on surface \(s\), and \(p\) is the pooled win-rate fraction across the three surfaces. All three surfaces are required. The 60/40 blend rewards both consistency and a competitive performance floor; weight sensitivity is reported separately. The `surface_adaptability` export and notebook document its eligibility rules.
 
@@ -120,11 +129,13 @@ Here, \(p_s\) is the known-outcome win-rate fraction on surface \(s\), and \(p\)
 
 The project combines four dimensions into a **balanced preference scenario**:
 
-\[
-S_{balanced}=0.25P+0.25D+0.25C+0.25A
-\]
 
-where **P** = observed winning performance, **D** = dominance, **C** = clutch performance, and **A** = surface adaptability, using fixed transformations: \(P=	ext{win rate as a fraction}\), \(D=DR/(1+DR)\), \(C=CI\), and \(A=SAS/100\). The displayed score is \(100S_{balanced}\).
+$$
+S_{balanced}=0.25P+0.25D+0.25C+0.25A
+
+$$
+
+where **P** = observed winning performance, **D** = dominance, **C** = clutch performance, and **A** = surface adaptability, using fixed transformations: \(P=\text{win rate as a fraction}\), \(D=DR/(1+DR)\), \(C=CI\), and \(A=SAS/100\). The displayed score is \(100S_{balanced}\).
 
 The fixed reference and exact transformations matter: **do not substitute raw percentages or ratios directly into this equation**. See `preference_scores` and `metric_contract` for the implementation.
 
@@ -179,9 +190,11 @@ The notebook also studies **shot-family mix, crosscourt/middle/down-the-line/ins
 
 **Shot-type and directional diversity** use normalized Shannon entropy on fixed, comparable category sets:
 
-\[
-H=-rac{\sum_{k=1}^{K}p_k\ln p_k}{\ln K}
-\]
+
+$$
+H=-\frac{\sum_{k=1}^{K}p_k\ln p_k}{\ln K}
+
+$$
 
 This 0–1 index measures variety, **not shot quality**. Court illustrations are schematic depictions of coded zones, not measured ball-tracking coordinates. Tactical evolution is analyzed using four-calendar-year periods anchored to each player's first charted year, with raw, within-surface, and surface-standardized comparisons where supported. It is not an invented innovation or athleticism score.
 
@@ -189,9 +202,11 @@ This 0–1 index measures variety, **not shot quality**. Court illustrations are
 
 Two **inferential logistic regressions** investigate conditional associations with (a) saving a break point and (b) winning a point in a validated completed tiebreak. Covariates include player, surface, set context, prior-rally length, and a descriptive opponent-strength proxy; the tiebreak model also controls for serving status.
 
-\[
-\operatorname{logit}(p_i)=x_i^Teta,\qquad OR_{a:b}=\exp(eta_a-eta_b)
-\]
+
+$$
+\operatorname{logit}(p_i)=x_i^T\beta,\qquad OR_{a:b}=\exp(\beta_a-\beta_b)
+
+$$
 
 Match-clustered robust uncertainty accounts for dependence among points in the same match. Six planned player contrasts receive Holm multiple-testing adjustment. These are **retrospective associations, not causal estimates, psychological measurements, or validated match forecasts**. In-sample Brier scores do not constitute out-of-sample predictive validation.
 
