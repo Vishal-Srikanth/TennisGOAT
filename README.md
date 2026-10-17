@@ -1,9 +1,9 @@
-# Who is the GOAT?
+# Who is the GOAT of Tennis? 
 ### Federer. Nadal. Djokovic. Three extraordinary careers. One difficult question.
 
 > **What happens when the greatest debate in tennis is examined point by point, rather than decided by a single trophy count?**
 
-Roger Federer, Rafael Nadal, and Novak Djokovic redefined men's tennis in different ways. *Deconstructing Greatness* is a reproducible, explanatory sports-analytics study of their charted performances: serving, returning, winning, performing under pressure, adapting to surfaces, and facing one another.
+Roger Federer, Rafael Nadal, and Novak Djokovic redefined men's tennis in different ways. *Who is the GOAT?* is a reproducible, explanatory sports-analytics study of their charted performances: serving, returning, winning, performing under pressure, adapting to surfaces, and facing one another.
 
 The goal is **not** to manufacture an official GOAT verdict. It is to make the evidence—and the choices involved in interpreting it—visible to tennis professionals, analysts, and curious fans.
 
@@ -50,10 +50,14 @@ All rates use eligible observations for the stated player, period, surface, or m
 | **Point win rate** | `100 × points won / eligible points played` | Share of observed points won |
 | **Service-point win rate** | `100 × service points won / service points played` | Success when serving |
 | **Return-point win rate** | `100 × return points won / return points played` | Success when receiving |
-| **First-serve-in rate** | `100 × first serves in / eligible first-serve attempts` | First-serve consistency |
+| **First-serve-in rate** | `100 × first serves in / service points played` | First-serve consistency |
 | **First-serve points won** | `100 × first-serve points won / first-serve points played` | Effectiveness behind the first serve |
 | **Second-serve points won** | `100 × second-serve points won / second-serve points played` | Effectiveness behind the second serve |
 | **Ace rate** | `100 × aces / eligible service points` | Aces relative to service-point exposure |
+| **Double-fault rate** | `100 × double faults / service points played` | Service errors relative to service-point exposure |
+| **Break-point conversion** | `100 × return break points won / return break-point opportunities` | Success on opportunities to break serve |
+| **Service hold rate** | `100 × completed service games held / completed service games` | Ability to protect service games; excludes tiebreaks |
+| **Return break rate** | `100 × completed return games won / completed return games` | Ability to break opponents; excludes tiebreaks |
 | **Break-point save rate** | `100 × break points saved / break points faced` | Success defending break points |
 | **Tiebreak win rate** | `100 × tiebreaks won / tiebreaks played` | Success in completed tiebreaks |
 | **Deciding-set win rate** | `100 × deciding sets won / deciding sets played` | Success in matches reaching a deciding set |
@@ -84,7 +88,13 @@ TB_{win}=\frac{\text{Tiebreaks won}}{\text{Tiebreaks played}},\quad
 DS_{win}=\frac{\text{Deciding sets won}}{\text{Deciding sets played}}
 \]
 
-These dimensions should be interpreted with their **sample sizes**: a strong percentage from a handful of opportunities does not carry the same evidential weight as one from hundreds. Consult `clutch_metrics` and `metric_contract` for the final implemented score definition, component eligibility, and missing-data rules. A clutch composite is an analytical convention, not an official tennis statistic.
+These dimensions should be interpreted with their **sample sizes**: a strong percentage from a handful of opportunities does not carry the same evidential weight as one from hundreds. The implemented **Clutch Index (CI)** is:
+
+\[
+CI=0.50 BP_{save}+0.30 TB_{win}+0.20 DS_{win}
+\]
+
+The component rates are fractions, and the headline CI is calculated only where all three are supported on the declared common eligible cohort. Its 50/30/20 weights are analyst-defined, not empirical measures of mental toughness. Consult `clutch_metrics` and `metric_contract` for event eligibility, exclusions, and denominators. A clutch composite is an analytical convention, not an official tennis statistic.
 
 ### Surface adaptability
 
@@ -93,7 +103,18 @@ Performance is compared across **hard, clay, and grass**, separating two questio
 - **How strong was a player on each surface?** Look at surface-specific performance levels.
 - **How consistent was performance across surfaces?** Look at variation across those levels.
 
-Consistency alone does not mean superiority: a player can be similarly average on all surfaces, while another can be exceptional on two and less successful on a third. The `surface_adaptability` export and notebook document the implemented comparison and its eligibility rules.
+Consistency alone does not mean superiority: a player can be similarly average on all surfaces, while another can be exceptional on two and less successful on a third. The primary **Surface Adaptability Score (SAS)** combines parity with the weakest-surface win rate:
+
+\[
+Parity=100\left(1-\sqrt{rac{1}{3}\sum_{s\in\{Hard,Clay,Grass\}}(p_s-p)^2}
+ight)
+\]
+
+\[
+SAS=0.60	imes Parity+0.40	imes(100\min_s p_s)
+\]
+
+Here, \(p_s\) is the known-outcome win-rate fraction on surface \(s\), and \(p\) is the pooled win-rate fraction across the three surfaces. All three surfaces are required. The 60/40 blend rewards both consistency and a competitive performance floor; weight sensitivity is reported separately. The `surface_adaptability` export and notebook document its eligibility rules.
 
 ### Preference scores: transparent judgments, not discovered truths
 
@@ -103,7 +124,7 @@ The project combines four dimensions into a **balanced preference scenario**:
 S_{balanced}=0.25P+0.25D+0.25C+0.25A
 \]
 
-where **P** = observed winning performance, **D** = dominance, **C** = clutch performance, and **A** = surface adaptability, each placed on the notebook's fixed-reference scoring scale before weighting.
+where **P** = observed winning performance, **D** = dominance, **C** = clutch performance, and **A** = surface adaptability, using fixed transformations: \(P=	ext{win rate as a fraction}\), \(D=DR/(1+DR)\), \(C=CI\), and \(A=SAS/100\). The displayed score is \(100S_{balanced}\).
 
 The fixed reference and exact transformations matter: **do not substitute raw percentages or ratios directly into this equation**. See `preference_scores` and `metric_contract` for the implementation.
 
@@ -152,15 +173,37 @@ The underlying source is the community-driven **Tennis Match Charting Project**,
 
 The analysis reconciles player identities, surface labels, available match outcomes, and relevant denominators before publishing comparisons. A notable identity check concerns Nadal's playing hand: the source contained **420 left-handed and 3 right-handed indications**, and the project adjudicated his canonical playing hand as **left-handed** rather than accepting the minority inconsistency at face value.
 
-### 3. Descriptive analytics
+### 3. Tactical patterns and evolution
+
+The notebook also studies **shot-family mix, crosscourt/middle/down-the-line/inside-out/inside-in direction, serve placement, return depth, net approaches, serve-and-volley, winner/error rates, and rally-length distributions** (1–4, 5–8, and 9+ shots), subject to source coverage.
+
+**Shot-type and directional diversity** use normalized Shannon entropy on fixed, comparable category sets:
+
+\[
+H=-rac{\sum_{k=1}^{K}p_k\ln p_k}{\ln K}
+\]
+
+This 0–1 index measures variety, **not shot quality**. Court illustrations are schematic depictions of coded zones, not measured ball-tracking coordinates. Tactical evolution is analyzed using four-calendar-year periods anchored to each player's first charted year, with raw, within-surface, and surface-standardized comparisons where supported. It is not an invented innovation or athleticism score.
+
+### 4. Contextual statistical inference
+
+Two **inferential logistic regressions** investigate conditional associations with (a) saving a break point and (b) winning a point in a validated completed tiebreak. Covariates include player, surface, set context, prior-rally length, and a descriptive opponent-strength proxy; the tiebreak model also controls for serving status.
+
+\[
+\operatorname{logit}(p_i)=x_i^Teta,\qquad OR_{a:b}=\exp(eta_a-eta_b)
+\]
+
+Match-clustered robust uncertainty accounts for dependence among points in the same match. Six planned player contrasts receive Holm multiple-testing adjustment. These are **retrospective associations, not causal estimates, psychological measurements, or validated match forecasts**. In-sample Brier scores do not constitute out-of-sample predictive validation.
+
+### 5. Descriptive analytics
 
 The notebook generates views of performance, clutch play, surface adaptability, head-to-head matchups, and scenario-based scores. The purpose is explanation and comparison—not forecasting the outcome of a future match.
 
-### 4. Uncertainty and sensitivity
+### 6. Uncertainty and sensitivity
 
-Small score differences should not be presented as settled rankings. The study examines uncertainty around comparisons and how results change when the definition of *greatness* changes. The balanced Federer–Djokovic comparison is a useful example: a narrow point estimate accompanies an interval crossing zero.
+Small score differences should not be presented as settled rankings. The study uses 2,000 shared match-cluster bootstrap replicates (seed 42), paired score-difference intervals, scenario-weight sweeps, leave-one-metric-out checks, and alternative scaling to examine how results change when the definition of *greatness* changes. Bootstrap first-place frequencies are conditional on the observed charted sample, not probabilities of being the greatest in history. The balanced Federer–Djokovic comparison is a useful example: a narrow point estimate accompanies an interval crossing zero.
 
-### 5. Export and quality control
+### 7. Export and quality control
 
 The October 17 completed notebook run reported:
 
@@ -181,7 +224,7 @@ The reported execution completed cleanly without warnings or errors. These are *
 
 ## Outputs and how to use them
 
-**`goat.ipynb` is the technical source of truth.** The structured exports are intended to make its results easier to inspect, audit, and visualize without reconstructing every intermediate calculation.
+**`goat.ipynb` is the technical source of truth.** The `Tableau Exports/` directory contains 37 registered analytical datasets plus the supporting field catalog and registry (39 CSV files when writing is enabled). The structured exports are intended to make its results easier to inspect, audit, and visualize without reconstructing every intermediate calculation.
 
 | Analytical export | Purpose |
 |---|---|
@@ -199,13 +242,17 @@ The reported execution completed cleanly without warnings or errors. These are *
 ## Reproducing the research
 
 1. Clone this repository and open it in VS Code or JupyterLab.
-2. Create a Python environment and install the dependencies specified by the repository's environment or requirements file.
+2. Create a Python environment and install the versions recorded by the final notebook:
+
+   ```bash
+   python -m pip install pandas==2.2.2 numpy==1.26.4 matplotlib==3.8.4 seaborn==0.13.2 scipy==1.13.0 scikit-learn==1.4.2 ipython==8.5.0 ipykernel==6.15.3 nbformat==5.5.0 nbclient==0.6.8
+   ```
 3. Obtain the source data from the [Tennis Match Charting Project](https://github.com/JeffSackmann/tennis_MatchChartingProject), observing its licensing and attribution terms.
-4. Place the source files at the paths expected by the notebook and verify its input configuration.
+4. Place the 19 expected source CSVs in `Raw Data/` beside the notebook; preserve original filenames and verify the input configuration.
 5. Open **`goat.ipynb`**, restart the kernel, and run all cells in order.
 6. Review generated figures, CSV exports, numerical checks, and release checks before interpreting the results.
 
-> **Reproducibility note:** Exact source filenames, directory layout, package versions, and export paths should be checked against the final repository before publication. This README deliberately does not invent a one-command CLI or directory tree that may not exist in the finished implementation.
+> **Reproducibility note:** The saved report identifies its input snapshot by aggregate SHA-256 `1b253ea57274935af4e7102b6e83d97d534b8fc74b6cc1ed48effcc8c258eab7`. Run the notebook from the project root. The notebook writes to `Tableau Exports/` when `WRITE_TABLEAU_EXPORTS = True`. Verify that your GitHub repository includes the expected inputs or instructions for obtaining them.
 
 ## Interpretation boundaries
 
@@ -218,7 +265,7 @@ This project takes the limitations of sports data seriously:
 - **Pressure metrics are descriptive:** They do not prove a stable psychological trait or explain why a player succeeded under pressure.
 - **Composite scores depend on values:** Choosing dimensions, scaling methods, and weights is an explicit judgment, not a law of tennis.
 - **Uncertainty is not optional:** A narrow numerical lead is not necessarily a meaningful difference.
-- **No predictive claim:** The delivered study does not train or validate an ATP match-outcome or service-hold prediction model.
+- **Inferential, not predictive:** The two contextual logistic models examine retrospective point outcomes; neither is validated as an out-of-sample forecast.
 
 These constraints do not undermine the analysis. They define the boundary between what the evidence can support and what would be speculation.
 
@@ -231,7 +278,7 @@ Respect the source repository's applicable licensing, attribution, and redistrib
 ## Author
 
 **Vishal Srikanth**  
-*Who is the GOAT? — A Tennis Analytics Research Project*
+*Who is the GOAT? — Tennis Analytics Research Project*
 
 ---
 
