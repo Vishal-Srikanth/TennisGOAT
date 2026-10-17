@@ -1,0 +1,14 @@
+# Local planning documents
+/Deconstructing Greatness - Big Three GOAT Engine Project Proposal.pdf
+/Deconstructing_Greatness_Project_Proposal.pdf
+
+# Local payloads, archives, generated reports, and backups
+/goat_web_payload.json
+/Raw Data.zip
+/Tableau Exports.zip
+/Report Outputs/
+/Backups/
+/goat.pca-refactor.tmp
+
+# macOS folder metadata
+.DS_Store
