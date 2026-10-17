@@ -1,0 +1,16 @@
+issue,status,affected_count,handling
+Equivalent hand labels/whitespace,Resolved,3,Unambiguous profile normalization; raw values retained
+Contradictory handedness codes,Known limitation,3,Documented >=99% player-profile consensus; full exceptions retained; source directions not recomputed
+Conflicting match identifiers,Known limitation,1,Entire affected match quarantined across sources
+Exact duplicate point rows,Resolved,1625,Exact repeats removed; retained source provenance
+Conflicting point keys,Known limitation,486,All affected matches quarantined; no arbitrary row selection
+Conflicting statistical player-match keys,Known limitation,16,Shared statistical exclusion; none of the affected keys belongs to the Big Three
+Unknown Big Three outcomes,Known limitation,54,"Missing, never losses; valid unrelated statistics retained"
+Source/point field discrepancies,Known limitation,91,Metric-specific eligibility; source values retained without forced reconciliation
+Contradictory best-of metadata,Known limitation,13,No historical override; contradicted outcome/deciding contexts excluded
+Invalid regular-game groups,Known limitation,24,"Hold/break requires valid starts, transitions, single server and terminal game"
+Unvalidated tiebreak groups,Known limitation,7,Excluded from completed-event cohorts; missing not fabricated
+Unknown/other Big Three surfaces,Known limitation,0,Retained in Overall; SAS restricted to named three-surface universe
+Unavailable ServeInfluence values and other numeric flags,Known limitation,12138,Explicit flags; unavailable entries do not become zero; not headline model inputs
+SnV source/code discrepancies,Known limitation,10,Excluded from affected SnV rates; explicit code/complement recovery is separate
+Missing ranking history and complete career results,Known limitation,3,No extrapolation; ranking weeks remain nullable/unavailable

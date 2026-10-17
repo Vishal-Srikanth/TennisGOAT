@@ -1,0 +1,13 @@
+player,scope,charted_matches,verified_wins,known_outcome_matches,unknown_outcome_matches,matches_with_overview,matches_with_points,earliest_charted_date,latest_charted_date,handedness,handedness_resolution,handedness_conflicting_records,weeks_at_no_1,player_id,weeks_at_no_1_availability
+Roger Federer,Overall,723,559,709,14,722,722,1998-07-04,2021-07-05,Right-handed,consistent recognized source records,0,,federer,Unavailable in supplied files
+Roger Federer,Clay,130,87,126,4,130,130,1999-07-16,2021-06-05,Right-handed,consistent recognized source records,0,,federer,Unavailable in supplied files
+Roger Federer,Grass,119,97,116,3,119,119,1998-07-04,2021-07-05,Right-handed,consistent recognized source records,0,,federer,Unavailable in supplied files
+Roger Federer,Hard,474,375,467,7,473,473,1998-10-05,2021-03-10,Right-handed,consistent recognized source records,0,,federer,Unavailable in supplied files
+Rafael Nadal,Overall,425,298,412,13,424,423,2003-05-15,2024-11-19,Left-handed,documented source consensus; contradictions retained,3,,nadal,Unavailable in supplied files
+Rafael Nadal,Clay,166,139,164,2,165,166,2003-05-15,2024-07-29,Left-handed,documented source consensus; contradictions retained,3,,nadal,Unavailable in supplied files
+Rafael Nadal,Grass,40,22,37,3,40,39,2003-06-27,2022-07-04,Left-handed,documented source consensus; contradictions retained,3,,nadal,Unavailable in supplied files
+Rafael Nadal,Hard,219,137,211,8,219,218,2004-03-28,2024-11-19,Left-handed,documented source consensus; contradictions retained,3,,nadal,Unavailable in supplied files
+Novak Djokovic,Overall,553,404,526,27,550,552,2005-01-17,2026-03-11,Right-handed,consistent recognized source records,0,,djokovic,Unavailable in supplied files
+Novak Djokovic,Clay,129,87,124,5,128,129,2006-04-19,2025-06-06,Right-handed,consistent recognized source records,0,,djokovic,Unavailable in supplied files
+Novak Djokovic,Grass,58,44,56,2,58,58,2007-07-05,2025-07-11,Right-handed,consistent recognized source records,0,,djokovic,Unavailable in supplied files
+Novak Djokovic,Hard,366,273,346,20,364,365,2005-01-17,2026-03-11,Right-handed,consistent recognized source records,0,,djokovic,Unavailable in supplied files

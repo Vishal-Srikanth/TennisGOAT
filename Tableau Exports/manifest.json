@@ -1,0 +1,312 @@
+{
+  "report_version": "1.1",
+  "report_snapshot_date": "2026-10-17",
+  "input_snapshot_sha256": "1b253ea57274935af4e7102b6e83d97d534b8fc74b6cc1ed48effcc8c258eab7",
+  "random_seed": 42,
+  "bootstrap_replicates": 2000,
+  "player_ids": {
+    "Roger Federer": "federer",
+    "Rafael Nadal": "nadal",
+    "Novak Djokovic": "djokovic"
+  },
+  "percentage_scale": "0–100 unless unit states fraction/index",
+  "missing_values": "empty CSV cells; unknown and not-applicable are not zeros",
+  "tables": [
+    {
+      "table": "players",
+      "rows": 3,
+      "columns": 9,
+      "unique_key": "player_id",
+      "notes": "Player dimension; charted coverage dates; ranking weeks blank with availability label",
+      "csv_sha256": "4bb928957496499e96834df470d9f560d971c9f37272381d96d936e48b5cb41d"
+    },
+    {
+      "table": "coverage",
+      "rows": 12,
+      "columns": 16,
+      "unique_key": "player_id, scope",
+      "notes": "Observed player/scope coverage and known/unknown outcomes",
+      "csv_sha256": "251e0afdf2567892750e036dd2d1c61545046ab51d1b64edba74a419b43fe439"
+    },
+    {
+      "table": "performance_metrics",
+      "rows": 168,
+      "columns": 22,
+      "unique_key": "player_id, scope, metric",
+      "notes": "Percentages 0–100 or DR ratio as unit states; matched counts and bootstrap intervals",
+      "csv_sha256": "b4b56b02aef74a3a230eb7acdb70a8591574fe4b8a3ac9cfcba06fe1366e9050"
+    },
+    {
+      "table": "clutch_metrics",
+      "rows": 48,
+      "columns": 13,
+      "unique_key": "player_id, scope, metric",
+      "notes": "Common-cohort components and full CI, fractions 0–1",
+      "csv_sha256": "9eae8bfaf994e8874c4dca2b5051e3dff33a715c69127bd8ec75a747bd9b3638"
+    },
+    {
+      "table": "clutch_component_evidence",
+      "rows": 36,
+      "columns": 11,
+      "unique_key": "player_id, scope, component",
+      "notes": "Component-specific versus common-cohort rates, fractions 0–1",
+      "csv_sha256": "33af6acf8482f944c77b5992314fd3102f85a18b253e8ced2db0db10f1d068e7"
+    },
+    {
+      "table": "pressure_event_coverage",
+      "rows": 18,
+      "columns": 8,
+      "unique_key": "model, player_id, scope",
+      "notes": "Observed eligible pressure points and match clusters; percentages 0–100",
+      "csv_sha256": "73272bf57d2f70b877fa4c7afaebe40927f36e7b33bba723ed74005e461a5317"
+    },
+    {
+      "table": "pressure_model_contrasts",
+      "rows": 6,
+      "columns": 7,
+      "unique_key": "model, comparison",
+      "notes": "Direct conditional odds ratios, Wald intervals, Holm-adjusted p-values",
+      "csv_sha256": "7694a553ba40cf56a42a202676403f8a00e08ad5dcb92c5916ca8e202a51e0a6"
+    },
+    {
+      "table": "shot_distribution",
+      "rows": 648,
+      "columns": 12,
+      "unique_key": "player_id, scope, distribution, category",
+      "notes": "Categorical counts and shares 0–100; no tracking coordinates",
+      "csv_sha256": "d687601c1e5907102221086ef4c68680ff99c5d2f1da8de40eeee887534fd90a"
+    },
+    {
+      "table": "shot_diversity",
+      "rows": 96,
+      "columns": 12,
+      "unique_key": "player_id, scope, distribution",
+      "notes": "Normalized entropy 0–1; fixed K and classified denominator",
+      "csv_sha256": "87bfc7159115d6569ea7ebb7450da44e2e7df273cd867234d6a045018c011d9e"
+    },
+    {
+      "table": "shot_coverage",
+      "rows": 12,
+      "columns": 24,
+      "unique_key": "player_id, scope",
+      "notes": "Sequence/type/target/depth coverage, not inferred missing strokes",
+      "csv_sha256": "ff71f735ac0ed2fc20b3fd5d57652a9e453799966349db1ad8c066ad74695333"
+    },
+    {
+      "table": "surface_adaptability",
+      "rows": 3,
+      "columns": 30,
+      "unique_key": "player_id, scope",
+      "notes": "Primary SAS/parity 0–100; weakest surface evidence and intervals",
+      "csv_sha256": "43bb2b22166a00c3cd53d47ec759858b0c607eae2c641c6c4320dd1c049f3649"
+    },
+    {
+      "table": "adaptability_weights",
+      "rows": 33,
+      "columns": 6,
+      "unique_key": "player_id, parity_weight",
+      "notes": "Point definition-sensitivity scores; weights are fractions",
+      "csv_sha256": "92bb2872c26fcdc02f85c712027b861fdfb0238912bc1b05ce13b5f168edc33c"
+    },
+    {
+      "table": "periods",
+      "rows": 18,
+      "columns": 11,
+      "unique_key": "player_id, period_index",
+      "notes": "Individual four-year bin definitions and observed dates; sort by period_index",
+      "csv_sha256": "4c9f5e2f84564607d937a7587940a7edf112b41773f04087b3c2b77135d7d0c8"
+    },
+    {
+      "table": "tactical_trends",
+      "rows": 1008,
+      "columns": 17,
+      "unique_key": "player_id, scope, period_index, metric",
+      "notes": "Raw pooled and within-surface rates 0–100, counts, eligible samples",
+      "csv_sha256": "be631aeedd04de2886add878d8a59c06536d2fa774c036b1979780a6c73d2b9e"
+    },
+    {
+      "table": "tactical_standardized",
+      "rows": 252,
+      "columns": 11,
+      "unique_key": "player_id, period_index, metric",
+      "notes": "Equal-surface estimates 0–100; not an observed Overall scope",
+      "csv_sha256": "f850f786b896cb500de7040a043a891a5ad2c673bed471244af4a9b00176f674"
+    },
+    {
+      "table": "tactical_changes",
+      "rows": 42,
+      "columns": 10,
+      "unique_key": "player_id, metric",
+      "notes": "Exploratory first/last supported-period changes in percentage points",
+      "csv_sha256": "ef96a44b1e487e786059ec7c9909970f33dc1d45b53ef40d58822f11360206fb"
+    },
+    {
+      "table": "style_profiles",
+      "rows": 192,
+      "columns": 12,
+      "unique_key": "player_id, scope, metric",
+      "notes": "Raw percentages 0–100 or diversity indices 0–1; unit column applies",
+      "csv_sha256": "a151864c7f1c2d528e56ec773e276d6540d264e444f1fa825a30cd0ec150d3ca"
+    },
+    {
+      "table": "comparison_inputs",
+      "rows": 12,
+      "columns": 12,
+      "unique_key": "player_id, metric",
+      "notes": "Raw values, primary fixed scales 0–1, alternative three-player min–max sensitivity",
+      "csv_sha256": "7bba8b513ba97702a2c89832ebaef9623b7df836e2d4fb3a810b17ffa588372c"
+    },
+    {
+      "table": "comparison_inputs_wide",
+      "rows": 3,
+      "columns": 6,
+      "unique_key": "player_id",
+      "notes": "Four primary fixed scales 0–1 for custom point weights",
+      "csv_sha256": "69f908b4babd2a9b57469571e368ac9f821c90ab146f57b0ed7516e5af5ef519"
+    },
+    {
+      "table": "comparison_bootstrap_inputs",
+      "rows": 6000,
+      "columns": 7,
+      "unique_key": "replicate_id, player_id",
+      "notes": "Joint paired scaled draws; do not break replicate/player dependence",
+      "csv_sha256": "4bd338d74b0d2b42f9d4cea0728fc7a0cf573b02a43c693a69247736381c9e4d"
+    },
+    {
+      "table": "preference_scores",
+      "rows": 15,
+      "columns": 12,
+      "unique_key": "scenario, player_id",
+      "notes": "Scenario scores 0–100, rank frequencies 0–100 and conditional intervals",
+      "csv_sha256": "e388cfbb2af6724e434f4cbd79b007c43769effe6182ca3a42d196db8a9cf12a"
+    },
+    {
+      "table": "preference_weights",
+      "rows": 20,
+      "columns": 3,
+      "unique_key": "scenario, metric",
+      "notes": "Scenario weights are nonnegative fractions summing to one",
+      "csv_sha256": "13ec6ac55060e77e96c7257541ae1bbbd8e432c737b713516779988c2ffc7ee7"
+    },
+    {
+      "table": "preference_contributions",
+      "rows": 60,
+      "columns": 7,
+      "unique_key": "scenario, player_id, metric",
+      "notes": "Contributions sum to scenario/player score, not independent achievements",
+      "csv_sha256": "6b9b0af5cec1c571f567ed68642a270570bea628feda39b05653a17da87d8f1b"
+    },
+    {
+      "table": "score_differences",
+      "rows": 15,
+      "columns": 6,
+      "unique_key": "scenario, comparison",
+      "notes": "Paired score differences and bootstrap-ahead frequency, not p-values",
+      "csv_sha256": "9e46c8e6ef220a3118b2854a949e8e6d1adb25baed09cf8594354a923101156a"
+    },
+    {
+      "table": "surface_preference_scores",
+      "rows": 9,
+      "columns": 9,
+      "unique_key": "player_id, scope",
+      "notes": "Illustrative equal winning/DR/CI score 0–100, SAS omitted",
+      "csv_sha256": "9cf18ace2a997b3e0bfa930ce9c3d74049d7e53fb924504cceb97ad7852b4f59"
+    },
+    {
+      "table": "head_to_head",
+      "rows": 12,
+      "columns": 14,
+      "unique_key": "player_a_id, player_b_id, scope",
+      "notes": "Charted rivalry outcomes; unknown matches retained, rates 0–100",
+      "csv_sha256": "c088a61745348770ccfc492a94386fc87150ff63d0e04b912e690b15904b3199"
+    },
+    {
+      "table": "scorecard",
+      "rows": 12,
+      "columns": 53,
+      "unique_key": "player_id, scope",
+      "notes": "Consolidated wide KPIs; units follow named metrics; SAS only Overall",
+      "csv_sha256": "dd95be437ea3e3599686863d26c2b38d822e7cead1ad4a19c768e45b82111197"
+    },
+    {
+      "table": "source_manifest",
+      "rows": 21,
+      "columns": 5,
+      "unique_key": "relative_path",
+      "notes": "Local input filenames, byte counts and SHA-256 fingerprints",
+      "csv_sha256": "58e6cbbc011c0fc4eb4ff6dcbe08c64a2155c97867691b2a32d64e7fdcad4b86"
+    },
+    {
+      "table": "audit_summary",
+      "rows": 19,
+      "columns": 10,
+      "unique_key": "dataset",
+      "notes": "Raw = duplicates removed + quarantined + eligible; counts are not rates",
+      "csv_sha256": "3e9a3bfc3352204bd7635cbaaa9b6377e0dcf815ed14947acc59112a5a1020d1"
+    },
+    {
+      "table": "player_metadata_evidence",
+      "rows": 3,
+      "columns": 11,
+      "unique_key": "player_id",
+      "notes": "Source-consensus player profile; supporting/conflicting/missing record counts",
+      "csv_sha256": "63145e8d48442a81722ddb25970585ca1ddf53896f2884e11ecfbae86f05284d"
+    },
+    {
+      "table": "handedness_raw_values",
+      "rows": 14,
+      "columns": 5,
+      "unique_key": "player_id, source_column, raw_representation",
+      "notes": "Every original hand label, preserved via repr; record counts",
+      "csv_sha256": "94369fe2f0676080cd874b997d56cd1b4396a7247cc2ff704e200f67c53457fc"
+    },
+    {
+      "table": "handedness_exceptions",
+      "rows": 7,
+      "columns": 8,
+      "unique_key": "match_id, player_id, source_column",
+      "notes": "Contradictory or missing hand records; no silent source overrides",
+      "csv_sha256": "74c24cb6947f0e1f429ba19f3b235fb4b171ecdc887658e93d64bc254797987c"
+    },
+    {
+      "table": "issue_disposition",
+      "rows": 15,
+      "columns": 4,
+      "unique_key": "issue",
+      "notes": "Resolved versus known source limitations; scope-specific counts are not additive",
+      "csv_sha256": "fda4376c784274bf9d5de8d962d7bc12e016846cfe2e6748b63e79c256592094"
+    },
+    {
+      "table": "metric_contract",
+      "rows": 58,
+      "columns": 8,
+      "unique_key": "analysis, metric",
+      "notes": "Formula, unit, eligible analytical inputs, pooling and uncertainty contract",
+      "csv_sha256": "511bd77ae66f581997a352769abcc46b44a459d547a388c2ed72b8e8de68ec54"
+    },
+    {
+      "table": "pressure_diagnostics",
+      "rows": 2,
+      "columns": 7,
+      "unique_key": "model",
+      "notes": "Numerical fit diagnostics; probabilities 0–1, score residual per observation",
+      "csv_sha256": "3352b076272b732d140dc7da6050af3c045b8a28e194c1a88ac84d360fba6de2"
+    },
+    {
+      "table": "pressure_context_effects",
+      "rows": 2,
+      "columns": 6,
+      "unique_key": "model",
+      "notes": "Conditional odds ratio for +10 percentage points of opponent proxy; not causal",
+      "csv_sha256": "bef20e2721fc59cfb24a02ac1383aec9833aaedc4d39c43a8180db49ff1f0699"
+    },
+    {
+      "table": "audit_review_register",
+      "rows": 4,
+      "columns": 3,
+      "unique_key": "issue",
+      "notes": "Review scopes and metric-specific handling; flags are not all corrupt matches",
+      "csv_sha256": "54a3eb35830a713e75a9f0fd5687a7e76c38483fa1babf9e4703a246e4c9b4e0"
+    }
+  ]
+}

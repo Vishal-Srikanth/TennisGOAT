@@ -1,0 +1,4 @@
+player,hand_code,handedness,supporting_records,recognized_records,conflicting_records,missing_or_unrecognized_records,consensus_pct,resolution_status,evidence_source,player_id
+Roger Federer,R,Right-handed,722,722,0,1,100,consistent recognized source records,Raw Data/charting-m-matches.csv; both participant slots,federer
+Rafael Nadal,L,Left-handed,420,423,3,2,99.2907801418,documented source consensus; contradictions retained,Raw Data/charting-m-matches.csv; both participant slots,nadal
+Novak Djokovic,R,Right-handed,552,552,0,1,100,consistent recognized source records,Raw Data/charting-m-matches.csv; both participant slots,djokovic

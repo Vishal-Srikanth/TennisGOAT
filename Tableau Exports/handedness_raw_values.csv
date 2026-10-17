@@ -1,0 +1,15 @@
+player,source_column,raw_representation,records,player_id
+Novak Djokovic,Pl 1 hand,'R',419,djokovic
+Novak Djokovic,Pl 1 hand,nan,1,djokovic
+Novak Djokovic,Pl 2 hand,'R',133,djokovic
+Rafael Nadal,Pl 1 hand,'L ',1,nadal
+Rafael Nadal,Pl 1 hand,'L',198,nadal
+Rafael Nadal,Pl 1 hand,'R',1,nadal
+Rafael Nadal,Pl 1 hand,nan,2,nadal
+Rafael Nadal,Pl 2 hand,'L ',1,nadal
+Rafael Nadal,Pl 2 hand,'L',220,nadal
+Rafael Nadal,Pl 2 hand,'R',2,nadal
+Roger Federer,Pl 1 hand,'R ',1,federer
+Roger Federer,Pl 1 hand,'R',487,federer
+Roger Federer,Pl 1 hand,nan,1,federer
+Roger Federer,Pl 2 hand,'R',234,federer

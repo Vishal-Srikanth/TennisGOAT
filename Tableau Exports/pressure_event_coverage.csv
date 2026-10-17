@@ -1,0 +1,19 @@
+model,player,scope,observations,successes,match_clusters,observed_success_pct,player_id
+BP save,Novak Djokovic,Clay,865,527,119,60.9248554913,djokovic
+BP save,Novak Djokovic,Grass,374,256,55,68.449197861,djokovic
+BP save,Novak Djokovic,Hard,1797,1161,318,64.6076794658,djokovic
+BP save,Rafael Nadal,Clay,980,640,139,65.306122449,nadal
+BP save,Rafael Nadal,Grass,245,166,33,67.7551020408,nadal
+BP save,Rafael Nadal,Hard,1206,748,188,62.0232172471,nadal
+BP save,Roger Federer,Clay,824,515,121,62.5,federer
+BP save,Roger Federer,Grass,467,337,97,72.1627408994,federer
+BP save,Roger Federer,Hard,2015,1323,390,65.6575682382,federer
+TB point,Novak Djokovic,Clay,551,309,42,56.0798548094,djokovic
+TB point,Novak Djokovic,Grass,569,303,33,53.2513181019,djokovic
+TB point,Novak Djokovic,Hard,1716,931,126,54.2540792541,djokovic
+TB point,Rafael Nadal,Clay,590,305,42,51.6949152542,nadal
+TB point,Rafael Nadal,Grass,381,192,22,50.3937007874,nadal
+TB point,Rafael Nadal,Hard,1202,612,83,50.9151414309,nadal
+TB point,Roger Federer,Clay,826,433,51,52.4213075061,federer
+TB point,Roger Federer,Grass,1081,585,69,54.1165587419,federer
+TB point,Roger Federer,Hard,2670,1431,174,53.595505618,federer

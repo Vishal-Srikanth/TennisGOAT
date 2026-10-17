@@ -1,0 +1,10 @@
+player,scope,illustrative_score,small_ci_sample,ci95_lower,ci95_upper,bootstrap_first_place_pct,paired_valid_bootstraps,player_id
+Roger Federer,Clay,60.9212020041,False,56.4214405705,65.4114190626,0.1,2000,federer
+Rafael Nadal,Clay,69.3552219586,False,66.0378275041,72.524469921,99.35,2000,nadal
+Novak Djokovic,Clay,61.7009173224,False,57.4627090228,66.2692548219,0.55,2000,djokovic
+Roger Federer,Grass,69.6440905776,True,65.0583730454,73.8876535843,75.2,2000,federer
+Rafael Nadal,Grass,56.4192582726,True,48.6166003984,64.5506471425,0.25,2000,nadal
+Novak Djokovic,Grass,66.9387281567,True,60.7144222185,72.4380323073,24.55,2000,djokovic
+Roger Federer,Hard,66.9494463539,False,64.6689077374,69.2570220564,58.4,2000,federer
+Rafael Nadal,Hard,58.513466618,False,54.8818955829,62.2074618047,0,2000,nadal
+Novak Djokovic,Hard,66.5761250609,False,63.9791013526,69.0652754069,41.6,2000,djokovic

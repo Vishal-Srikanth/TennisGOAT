@@ -1,0 +1,20 @@
+dataset,key,raw_rows,exact_duplicates_removed,missing_key_rows,conflicting_key_rows,conflicting_keys,quarantined_rows,eligible_rows,rows_after_shared_quarantine
+charting_m_matches,match_id,7566,0,0,2,1,10,7556,7556
+charting_m_points_2010s,"match_id, Pt (across all era files)",357229,299,0,0,0,0,356930,356930
+charting_m_points_2020s,"match_id, Pt (across all era files)",547478,83,0,394,197,593,546802,546802
+charting_m_points_to_2009,"match_id, Pt (across all era files)",379569,1243,0,578,289,1842,376484,376484
+charting_m_stats_KeyPointsReturn,"match_id, player, row",60464,84,0,40,20,92,60288,60288
+charting_m_stats_KeyPointsServe,"match_id, player, row",60464,84,0,40,20,92,60288,60288
+charting_m_stats_NetPoints,"match_id, player, row",59396,74,0,60,30,102,59220,59220
+charting_m_stats_Overview,"match_id, player, set",56850,56,0,92,46,126,56668,56668
+charting_m_stats_Rally,"match_id, server, returner, row",96706,107,0,110,55,167,96432,96432
+charting_m_stats_ReturnDepth,"match_id, player, row",270002,323,0,276,138,457,269222,269222
+charting_m_stats_ReturnOutcomes,"match_id, player, row",310496,378,0,308,154,527,309591,309591
+charting_m_stats_ServeBasics,"match_id, player, row",45341,47,0,62,31,85,45209,45209
+charting_m_stats_ServeDirection,"match_id, player, row",45341,47,0,62,31,85,45209,45209
+charting_m_stats_ServeInfluence,"match_id, player, row",30235,34,0,36,18,54,30147,30147
+charting_m_stats_ShotDirOutcomes,"match_id, player, row",174687,227,0,154,77,290,174170,174170
+charting_m_stats_ShotDirection,"match_id, player, row",59997,66,0,76,38,110,59821,59821
+charting_m_stats_SnV,"match_id, player, row",51300,78,0,66,33,116,51106,51106
+charting_m_stats_SvBreakSplit,"match_id, player, row",164871,196,0,168,84,277,164398,164398
+charting_m_stats_SvBreakTotal,"match_id, player, row",164871,196,0,168,84,277,164398,164398

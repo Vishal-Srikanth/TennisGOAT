@@ -1,0 +1,428 @@
+table,field,pandas_dtype,role,missing_cells,unit,table_units_and_use
+players,player,object,attribute,0,categorical/text attribute,Player dimension; charted coverage dates; ranking weeks blank with availability label
+players,handedness,object,attribute,0,categorical/text attribute,Player dimension; charted coverage dates; ranking weeks blank with availability label
+players,handedness_resolution,object,attribute,0,categorical/text attribute,Player dimension; charted coverage dates; ranking weeks blank with availability label
+players,handedness_conflicting_records,int64,measure,0,count (see field name and table grain),Player dimension; charted coverage dates; ranking weeks blank with availability label
+players,earliest_charted_date,object,attribute,0,ISO date (YYYY-MM-DD),Player dimension; charted coverage dates; ranking weeks blank with availability label
+players,latest_charted_date,object,attribute,0,ISO date (YYYY-MM-DD),Player dimension; charted coverage dates; ranking weeks blank with availability label
+players,weeks_at_no_1,Float64,measure,3,weeks; unavailable in supplied sources,Player dimension; charted coverage dates; ranking weeks blank with availability label
+players,player_id,object,key,0,categorical/text attribute,Player dimension; charted coverage dates; ranking weeks blank with availability label
+players,weeks_at_no_1_availability,object,attribute,0,categorical/text attribute,Player dimension; charted coverage dates; ranking weeks blank with availability label
+coverage,player,object,attribute,0,categorical/text attribute,Observed player/scope coverage and known/unknown outcomes
+coverage,scope,object,key,0,categorical/text attribute,Observed player/scope coverage and known/unknown outcomes
+coverage,charted_matches,int64,measure,0,count (see field name and table grain),Observed player/scope coverage and known/unknown outcomes
+coverage,verified_wins,int64,measure,0,count (see field name and table grain),Observed player/scope coverage and known/unknown outcomes
+coverage,known_outcome_matches,int64,measure,0,count (see field name and table grain),Observed player/scope coverage and known/unknown outcomes
+coverage,unknown_outcome_matches,int64,measure,0,count (see field name and table grain),Observed player/scope coverage and known/unknown outcomes
+coverage,matches_with_overview,int64,measure,0,count (see field name and table grain),Observed player/scope coverage and known/unknown outcomes
+coverage,matches_with_points,int64,measure,0,count (see field name and table grain),Observed player/scope coverage and known/unknown outcomes
+coverage,earliest_charted_date,object,attribute,0,ISO date (YYYY-MM-DD),Observed player/scope coverage and known/unknown outcomes
+coverage,latest_charted_date,object,attribute,0,ISO date (YYYY-MM-DD),Observed player/scope coverage and known/unknown outcomes
+coverage,handedness,object,attribute,0,categorical/text attribute,Observed player/scope coverage and known/unknown outcomes
+coverage,handedness_resolution,object,attribute,0,categorical/text attribute,Observed player/scope coverage and known/unknown outcomes
+coverage,handedness_conflicting_records,int64,measure,0,count (see field name and table grain),Observed player/scope coverage and known/unknown outcomes
+coverage,weeks_at_no_1,Float64,measure,12,weeks; unavailable in supplied sources,Observed player/scope coverage and known/unknown outcomes
+coverage,player_id,object,key,0,categorical/text attribute,Observed player/scope coverage and known/unknown outcomes
+coverage,weeks_at_no_1_availability,object,attribute,0,categorical/text attribute,Observed player/scope coverage and known/unknown outcomes
+performance_metrics,player,object,attribute,0,categorical/text attribute,Percentages 0–100 or DR ratio as unit states; matched counts and bootstrap intervals
+performance_metrics,scope,object,key,0,categorical/text attribute,Percentages 0–100 or DR ratio as unit states; matched counts and bootstrap intervals
+performance_metrics,metric,object,key,0,categorical/text attribute,Percentages 0–100 or DR ratio as unit states; matched counts and bootstrap intervals
+performance_metrics,estimate,float64,measure,0,row-specific: see unit column,Percentages 0–100 or DR ratio as unit states; matched counts and bootstrap intervals
+performance_metrics,unit,object,attribute,0,categorical/text attribute,Percentages 0–100 or DR ratio as unit states; matched counts and bootstrap intervals
+performance_metrics,numerator,float64,measure,12,pooled eligible count; blank for derived composites/ratios without a single count,Percentages 0–100 or DR ratio as unit states; matched counts and bootstrap intervals
+performance_metrics,denominator,float64,measure,12,pooled eligible count; blank for derived composites/ratios without a single count,Percentages 0–100 or DR ratio as unit states; matched counts and bootstrap intervals
+performance_metrics,eligible_matches,int64,measure,0,count (see field name and table grain),Percentages 0–100 or DR ratio as unit states; matched counts and bootstrap intervals
+performance_metrics,cohort_matches,int64,measure,0,count (see field name and table grain),Percentages 0–100 or DR ratio as unit states; matched counts and bootstrap intervals
+performance_metrics,coverage_pct,float64,measure,0,percent (0–100),Percentages 0–100 or DR ratio as unit states; matched counts and bootstrap intervals
+performance_metrics,matches_with_point_reconciliation,object,attribute,72,categorical/text attribute,Percentages 0–100 or DR ratio as unit states; matched counts and bootstrap intervals
+performance_metrics,small_sample,bool,measure,0,boolean flag,Percentages 0–100 or DR ratio as unit states; matched counts and bootstrap intervals
+performance_metrics,near_zero_dr_denominator,bool,measure,0,boolean flag,Percentages 0–100 or DR ratio as unit states; matched counts and bootstrap intervals
+performance_metrics,return_points_won_dr,float64,measure,156,count (see field name and table grain),Percentages 0–100 or DR ratio as unit states; matched counts and bootstrap intervals
+performance_metrics,return_points_dr,float64,measure,156,count (see field name and table grain),Percentages 0–100 or DR ratio as unit states; matched counts and bootstrap intervals
+performance_metrics,service_points_won_dr,float64,measure,156,count (see field name and table grain),Percentages 0–100 or DR ratio as unit states; matched counts and bootstrap intervals
+performance_metrics,service_points_dr,float64,measure,156,count (see field name and table grain),Percentages 0–100 or DR ratio as unit states; matched counts and bootstrap intervals
+performance_metrics,valid_bootstrap_replicates,int64,measure,0,count (see field name and table grain),Percentages 0–100 or DR ratio as unit states; matched counts and bootstrap intervals
+performance_metrics,ci95_lower,float64,measure,0,row-specific: see unit column,Percentages 0–100 or DR ratio as unit states; matched counts and bootstrap intervals
+performance_metrics,ci95_upper,float64,measure,0,row-specific: see unit column,Percentages 0–100 or DR ratio as unit states; matched counts and bootstrap intervals
+performance_metrics,status,object,attribute,0,categorical/text attribute,Percentages 0–100 or DR ratio as unit states; matched counts and bootstrap intervals
+performance_metrics,player_id,object,key,0,categorical/text attribute,Percentages 0–100 or DR ratio as unit states; matched counts and bootstrap intervals
+clutch_metrics,player,object,attribute,0,categorical/text attribute,"Common-cohort components and full CI, fractions 0–1"
+clutch_metrics,scope,object,key,0,categorical/text attribute,"Common-cohort components and full CI, fractions 0–1"
+clutch_metrics,metric,object,key,0,categorical/text attribute,"Common-cohort components and full CI, fractions 0–1"
+clutch_metrics,estimate,float64,measure,0,fraction (0–1),"Common-cohort components and full CI, fractions 0–1"
+clutch_metrics,unit,object,attribute,0,categorical/text attribute,"Common-cohort components and full CI, fractions 0–1"
+clutch_metrics,numerator,float64,measure,12,pooled eligible count; blank for derived composites/ratios without a single count,"Common-cohort components and full CI, fractions 0–1"
+clutch_metrics,denominator,float64,measure,12,pooled eligible count; blank for derived composites/ratios without a single count,"Common-cohort components and full CI, fractions 0–1"
+clutch_metrics,common_ci_matches,int64,measure,0,count (see field name and table grain),"Common-cohort components and full CI, fractions 0–1"
+clutch_metrics,cohort_matches,int64,measure,0,count (see field name and table grain),"Common-cohort components and full CI, fractions 0–1"
+clutch_metrics,small_sample,bool,measure,0,boolean flag,"Common-cohort components and full CI, fractions 0–1"
+clutch_metrics,ci95_lower,float64,measure,0,fraction (0–1),"Common-cohort components and full CI, fractions 0–1"
+clutch_metrics,ci95_upper,float64,measure,0,fraction (0–1),"Common-cohort components and full CI, fractions 0–1"
+clutch_metrics,player_id,object,key,0,categorical/text attribute,"Common-cohort components and full CI, fractions 0–1"
+clutch_component_evidence,player,object,attribute,0,categorical/text attribute,"Component-specific versus common-cohort rates, fractions 0–1"
+clutch_component_evidence,scope,object,key,0,categorical/text attribute,"Component-specific versus common-cohort rates, fractions 0–1"
+clutch_component_evidence,component,object,key,0,categorical/text attribute,"Component-specific versus common-cohort rates, fractions 0–1"
+clutch_component_evidence,component_eligible_matches,int64,measure,0,count (see field name and table grain),"Component-specific versus common-cohort rates, fractions 0–1"
+clutch_component_evidence,component_wins,float64,measure,0,count (see field name and table grain),"Component-specific versus common-cohort rates, fractions 0–1"
+clutch_component_evidence,component_events,float64,measure,0,count (see field name and table grain),"Component-specific versus common-cohort rates, fractions 0–1"
+clutch_component_evidence,component_only_rate,float64,measure,0,fraction (0–1),"Component-specific versus common-cohort rates, fractions 0–1"
+clutch_component_evidence,common_ci_wins,float64,measure,0,count (see field name and table grain),"Component-specific versus common-cohort rates, fractions 0–1"
+clutch_component_evidence,common_ci_events,float64,measure,0,count (see field name and table grain),"Component-specific versus common-cohort rates, fractions 0–1"
+clutch_component_evidence,common_ci_rate,float64,measure,0,fraction (0–1),"Component-specific versus common-cohort rates, fractions 0–1"
+clutch_component_evidence,player_id,object,key,0,categorical/text attribute,"Component-specific versus common-cohort rates, fractions 0–1"
+pressure_event_coverage,model,object,key,0,categorical/text attribute,Observed eligible pressure points and match clusters; percentages 0–100
+pressure_event_coverage,player,object,attribute,0,categorical/text attribute,Observed eligible pressure points and match clusters; percentages 0–100
+pressure_event_coverage,scope,string,key,0,categorical/text attribute,Observed eligible pressure points and match clusters; percentages 0–100
+pressure_event_coverage,observations,int64,measure,0,count (see field name and table grain),Observed eligible pressure points and match clusters; percentages 0–100
+pressure_event_coverage,successes,int64,measure,0,count (see field name and table grain),Observed eligible pressure points and match clusters; percentages 0–100
+pressure_event_coverage,match_clusters,int64,measure,0,count (see field name and table grain),Observed eligible pressure points and match clusters; percentages 0–100
+pressure_event_coverage,observed_success_pct,float64,measure,0,percent (0–100),Observed eligible pressure points and match clusters; percentages 0–100
+pressure_event_coverage,player_id,object,key,0,categorical/text attribute,Observed eligible pressure points and match clusters; percentages 0–100
+pressure_model_contrasts,model,object,key,0,categorical/text attribute,"Direct conditional odds ratios, Wald intervals, Holm-adjusted p-values"
+pressure_model_contrasts,comparison,object,key,0,categorical/text attribute,"Direct conditional odds ratios, Wald intervals, Holm-adjusted p-values"
+pressure_model_contrasts,odds_ratio,float64,measure,0,odds ratio,"Direct conditional odds ratios, Wald intervals, Holm-adjusted p-values"
+pressure_model_contrasts,ci95_lower,float64,measure,0,odds ratio,"Direct conditional odds ratios, Wald intervals, Holm-adjusted p-values"
+pressure_model_contrasts,ci95_upper,float64,measure,0,odds ratio,"Direct conditional odds ratios, Wald intervals, Holm-adjusted p-values"
+pressure_model_contrasts,p_value_unadjusted,float64,measure,0,p-value (0–1),"Direct conditional odds ratios, Wald intervals, Holm-adjusted p-values"
+pressure_model_contrasts,p_value_holm_six_tests,float64,measure,0,p-value (0–1),"Direct conditional odds ratios, Wald intervals, Holm-adjusted p-values"
+shot_distribution,player,object,attribute,0,categorical/text attribute,Categorical counts and shares 0–100; no tracking coordinates
+shot_distribution,scope,object,key,0,categorical/text attribute,Categorical counts and shares 0–100; no tracking coordinates
+shot_distribution,distribution,object,key,0,categorical/text attribute,Categorical counts and shares 0–100; no tracking coordinates
+shot_distribution,category,object,key,0,categorical/text attribute,Categorical counts and shares 0–100; no tracking coordinates
+shot_distribution,count,int64,measure,0,count (see field name and table grain),Categorical counts and shares 0–100; no tracking coordinates
+shot_distribution,classified_denominator,int64,measure,0,count (see field name and table grain),Categorical counts and shares 0–100; no tracking coordinates
+shot_distribution,share_pct,float64,measure,0,percent (0–100),Categorical counts and shares 0–100; no tracking coordinates
+shot_distribution,contributing_matches,int64,measure,0,count (see field name and table grain),Categorical counts and shares 0–100; no tracking coordinates
+shot_distribution,valid_bootstraps,int64,measure,0,count (see field name and table grain),Categorical counts and shares 0–100; no tracking coordinates
+shot_distribution,ci95_lower,float64,measure,0,"percentage or score (0–100), as table contract states",Categorical counts and shares 0–100; no tracking coordinates
+shot_distribution,ci95_upper,float64,measure,0,"percentage or score (0–100), as table contract states",Categorical counts and shares 0–100; no tracking coordinates
+shot_distribution,player_id,object,key,0,categorical/text attribute,Categorical counts and shares 0–100; no tracking coordinates
+shot_diversity,player,object,attribute,0,categorical/text attribute,Normalized entropy 0–1; fixed K and classified denominator
+shot_diversity,scope,object,key,0,categorical/text attribute,Normalized entropy 0–1; fixed K and classified denominator
+shot_diversity,distribution,object,key,0,categorical/text attribute,Normalized entropy 0–1; fixed K and classified denominator
+shot_diversity,normalized_entropy,float64,measure,0,normalized entropy (0–1),Normalized entropy 0–1; fixed K and classified denominator
+shot_diversity,fixed_categories_K,int64,measure,0,count (see field name and table grain),Normalized entropy 0–1; fixed K and classified denominator
+shot_diversity,classified_strokes,int64,measure,0,count (see field name and table grain),Normalized entropy 0–1; fixed K and classified denominator
+shot_diversity,contributing_matches,int64,measure,0,count (see field name and table grain),Normalized entropy 0–1; fixed K and classified denominator
+shot_diversity,small_sample,bool,measure,0,boolean flag,Normalized entropy 0–1; fixed K and classified denominator
+shot_diversity,valid_bootstraps,int64,measure,0,count (see field name and table grain),Normalized entropy 0–1; fixed K and classified denominator
+shot_diversity,ci95_lower,float64,measure,0,normalized entropy (0–1),Normalized entropy 0–1; fixed K and classified denominator
+shot_diversity,ci95_upper,float64,measure,0,normalized entropy (0–1),Normalized entropy 0–1; fixed K and classified denominator
+shot_diversity,player_id,object,key,0,categorical/text attribute,Normalized entropy 0–1; fixed K and classified denominator
+shot_coverage,player,object,attribute,0,categorical/text attribute,"Sequence/type/target/depth coverage, not inferred missing strokes"
+shot_coverage,scope,object,key,0,categorical/text attribute,"Sequence/type/target/depth coverage, not inferred missing strokes"
+shot_coverage,cohort_matches,int64,measure,0,count (see field name and table grain),"Sequence/type/target/depth coverage, not inferred missing strokes"
+shot_coverage,matches_with_parsed_strokes,int64,measure,0,count (see field name and table grain),"Sequence/type/target/depth coverage, not inferred missing strokes"
+shot_coverage,recorded_player_points,int64,measure,0,count (see field name and table grain),"Sequence/type/target/depth coverage, not inferred missing strokes"
+shot_coverage,points_with_sequence_codes,int64,measure,0,count (see field name and table grain),"Sequence/type/target/depth coverage, not inferred missing strokes"
+shot_coverage,sequence_code_coverage_pct,float64,measure,0,percent (0–100),"Sequence/type/target/depth coverage, not inferred missing strokes"
+shot_coverage,attempted_rally_strokes,int64,measure,0,count (see field name and table grain),"Sequence/type/target/depth coverage, not inferred missing strokes"
+shot_coverage,error_attempts,int64,measure,0,count (see field name and table grain),"Sequence/type/target/depth coverage, not inferred missing strokes"
+shot_coverage,unknown_type_strokes,int64,measure,0,count (see field name and table grain),"Sequence/type/target/depth coverage, not inferred missing strokes"
+shot_coverage,unknown_type_pct,float64,measure,0,percent (0–100),"Sequence/type/target/depth coverage, not inferred missing strokes"
+shot_coverage,known_wing_strokes,int64,measure,0,count (see field name and table grain),"Sequence/type/target/depth coverage, not inferred missing strokes"
+shot_coverage,forehand_share_known_wing_pct,float64,measure,0,percent (0–100),"Sequence/type/target/depth coverage, not inferred missing strokes"
+shot_coverage,classified_targets,int64,measure,0,count (see field name and table grain),"Sequence/type/target/depth coverage, not inferred missing strokes"
+shot_coverage,target_direction_coverage_pct,float64,measure,0,percent (0–100),"Sequence/type/target/depth coverage, not inferred missing strokes"
+shot_coverage,parsed_return_attempts,int64,measure,0,count (see field name and table grain),"Sequence/type/target/depth coverage, not inferred missing strokes"
+shot_coverage,returns_with_known_depth,int64,measure,0,count (see field name and table grain),"Sequence/type/target/depth coverage, not inferred missing strokes"
+shot_coverage,return_depth_coverage_pct,float64,measure,0,percent (0–100),"Sequence/type/target/depth coverage, not inferred missing strokes"
+shot_coverage,returns_with_depth_and_direction,int64,measure,0,count (see field name and table grain),"Sequence/type/target/depth coverage, not inferred missing strokes"
+shot_coverage,recorded_service_points,int64,measure,0,count (see field name and table grain),"Sequence/type/target/depth coverage, not inferred missing strokes"
+shot_coverage,classified_active_serve_targets,int64,measure,0,count (see field name and table grain),"Sequence/type/target/depth coverage, not inferred missing strokes"
+shot_coverage,active_serve_target_coverage_pct,float64,measure,0,percent (0–100),"Sequence/type/target/depth coverage, not inferred missing strokes"
+shot_coverage,source_Total_direction_matches,int64,measure,0,count (see field name and table grain),"Sequence/type/target/depth coverage, not inferred missing strokes"
+shot_coverage,player_id,object,key,0,categorical/text attribute,"Sequence/type/target/depth coverage, not inferred missing strokes"
+surface_adaptability,player,object,attribute,0,categorical/text attribute,Primary SAS/parity 0–100; weakest surface evidence and intervals
+surface_adaptability,known_outcome_matches,int64,measure,0,count (see field name and table grain),Primary SAS/parity 0–100; weakest surface evidence and intervals
+surface_adaptability,unknown_outcome_matches,int64,measure,0,count (see field name and table grain),Primary SAS/parity 0–100; weakest surface evidence and intervals
+surface_adaptability,win_rate_overall_pct,float64,measure,0,percent (0–100),Primary SAS/parity 0–100; weakest surface evidence and intervals
+surface_adaptability,parity_score,float64,measure,0,score (0–100),Primary SAS/parity 0–100; weakest surface evidence and intervals
+surface_adaptability,weakest_surface_win_pct,float64,measure,0,percent (0–100),Primary SAS/parity 0–100; weakest surface evidence and intervals
+surface_adaptability,weakest_surface,object,attribute,0,categorical/text attribute,Primary SAS/parity 0–100; weakest surface evidence and intervals
+surface_adaptability,surface_adaptability_score,float64,measure,0,score (0–100),Primary SAS/parity 0–100; weakest surface evidence and intervals
+surface_adaptability,equal_surface_anchor_sas_sensitivity,float64,measure,0,score (0–100),Primary SAS/parity 0–100; weakest surface evidence and intervals
+surface_adaptability,small_surface_sample,bool,measure,0,boolean flag,Primary SAS/parity 0–100; weakest surface evidence and intervals
+surface_adaptability,Clay_known_matches,int64,measure,0,count (see field name and table grain),Primary SAS/parity 0–100; weakest surface evidence and intervals
+surface_adaptability,Clay_wins,int64,measure,0,count (see field name and table grain),Primary SAS/parity 0–100; weakest surface evidence and intervals
+surface_adaptability,Clay_win_pct,float64,measure,0,percent (0–100),Primary SAS/parity 0–100; weakest surface evidence and intervals
+surface_adaptability,Grass_known_matches,int64,measure,0,count (see field name and table grain),Primary SAS/parity 0–100; weakest surface evidence and intervals
+surface_adaptability,Grass_wins,int64,measure,0,count (see field name and table grain),Primary SAS/parity 0–100; weakest surface evidence and intervals
+surface_adaptability,Grass_win_pct,float64,measure,0,percent (0–100),Primary SAS/parity 0–100; weakest surface evidence and intervals
+surface_adaptability,Hard_known_matches,int64,measure,0,count (see field name and table grain),Primary SAS/parity 0–100; weakest surface evidence and intervals
+surface_adaptability,Hard_wins,int64,measure,0,count (see field name and table grain),Primary SAS/parity 0–100; weakest surface evidence and intervals
+surface_adaptability,Hard_win_pct,float64,measure,0,percent (0–100),Primary SAS/parity 0–100; weakest surface evidence and intervals
+surface_adaptability,parity_score_valid_bootstraps,int64,measure,0,score (0–100),Primary SAS/parity 0–100; weakest surface evidence and intervals
+surface_adaptability,parity_score_ci95_lower,float64,measure,0,score (0–100),Primary SAS/parity 0–100; weakest surface evidence and intervals
+surface_adaptability,parity_score_ci95_upper,float64,measure,0,score (0–100),Primary SAS/parity 0–100; weakest surface evidence and intervals
+surface_adaptability,weakest_surface_win_pct_valid_bootstraps,int64,measure,0,percent (0–100),Primary SAS/parity 0–100; weakest surface evidence and intervals
+surface_adaptability,weakest_surface_win_pct_ci95_lower,float64,measure,0,percent (0–100),Primary SAS/parity 0–100; weakest surface evidence and intervals
+surface_adaptability,weakest_surface_win_pct_ci95_upper,float64,measure,0,percent (0–100),Primary SAS/parity 0–100; weakest surface evidence and intervals
+surface_adaptability,surface_adaptability_score_valid_bootstraps,int64,measure,0,score (0–100),Primary SAS/parity 0–100; weakest surface evidence and intervals
+surface_adaptability,surface_adaptability_score_ci95_lower,float64,measure,0,score (0–100),Primary SAS/parity 0–100; weakest surface evidence and intervals
+surface_adaptability,surface_adaptability_score_ci95_upper,float64,measure,0,score (0–100),Primary SAS/parity 0–100; weakest surface evidence and intervals
+surface_adaptability,scope,object,key,0,categorical/text attribute,Primary SAS/parity 0–100; weakest surface evidence and intervals
+surface_adaptability,player_id,object,key,0,categorical/text attribute,Primary SAS/parity 0–100; weakest surface evidence and intervals
+adaptability_weights,player,object,attribute,0,categorical/text attribute,Point definition-sensitivity scores; weights are fractions
+adaptability_weights,parity_weight,float64,key,0,fraction / fixed scale (0–1),Point definition-sensitivity scores; weights are fractions
+adaptability_weights,weakest_surface_weight,float64,measure,0,fraction / fixed scale (0–1),Point definition-sensitivity scores; weights are fractions
+adaptability_weights,score,float64,measure,0,score (0–100),Point definition-sensitivity scores; weights are fractions
+adaptability_weights,rank_within_weight,float64,measure,0,ordinal rank,Point definition-sensitivity scores; weights are fractions
+adaptability_weights,player_id,object,key,0,categorical/text attribute,Point definition-sensitivity scores; weights are fractions
+periods,player,object,attribute,0,categorical/text attribute,Individual four-year bin definitions and observed dates; sort by period_index
+periods,period_index,int64,key,0,integer identifier; not additive,Individual four-year bin definitions and observed dates; sort by period_index
+periods,period,object,attribute,0,categorical/text attribute,Individual four-year bin definitions and observed dates; sort by period_index
+periods,start_year,int64,measure,0,calendar year,Individual four-year bin definitions and observed dates; sort by period_index
+periods,end_year,int64,measure,0,calendar year,Individual four-year bin definitions and observed dates; sort by period_index
+periods,nominal_years,int64,measure,0,years,Individual four-year bin definitions and observed dates; sort by period_index
+periods,coverage_edge,bool,measure,0,boolean flag,Individual four-year bin definitions and observed dates; sort by period_index
+periods,first_charted_date,object,attribute,0,ISO date (YYYY-MM-DD),Individual four-year bin definitions and observed dates; sort by period_index
+periods,last_charted_date,object,attribute,0,ISO date (YYYY-MM-DD),Individual four-year bin definitions and observed dates; sort by period_index
+periods,charted_matches,int64,measure,0,count (see field name and table grain),Individual four-year bin definitions and observed dates; sort by period_index
+periods,player_id,object,key,0,categorical/text attribute,Individual four-year bin definitions and observed dates; sort by period_index
+tactical_trends,player,object,attribute,0,categorical/text attribute,"Raw pooled and within-surface rates 0–100, counts, eligible samples"
+tactical_trends,period_index,int64,key,0,integer identifier; not additive,"Raw pooled and within-surface rates 0–100, counts, eligible samples"
+tactical_trends,period,object,attribute,0,categorical/text attribute,"Raw pooled and within-surface rates 0–100, counts, eligible samples"
+tactical_trends,scope,object,key,0,categorical/text attribute,"Raw pooled and within-surface rates 0–100, counts, eligible samples"
+tactical_trends,metric,object,key,0,categorical/text attribute,"Raw pooled and within-surface rates 0–100, counts, eligible samples"
+tactical_trends,numerator,float64,measure,14,pooled eligible count; blank for derived composites/ratios without a single count,"Raw pooled and within-surface rates 0–100, counts, eligible samples"
+tactical_trends,denominator,float64,measure,14,pooled eligible count; blank for derived composites/ratios without a single count,"Raw pooled and within-surface rates 0–100, counts, eligible samples"
+tactical_trends,estimate_pct,float64,measure,14,percent (0–100),"Raw pooled and within-surface rates 0–100, counts, eligible samples"
+tactical_trends,contributing_matches,int64,measure,0,count (see field name and table grain),"Raw pooled and within-surface rates 0–100, counts, eligible samples"
+tactical_trends,cohort_matches,int64,measure,0,count (see field name and table grain),"Raw pooled and within-surface rates 0–100, counts, eligible samples"
+tactical_trends,coverage_pct,float64,measure,14,percent (0–100),"Raw pooled and within-surface rates 0–100, counts, eligible samples"
+tactical_trends,small_sample,bool,measure,0,boolean flag,"Raw pooled and within-surface rates 0–100, counts, eligible samples"
+tactical_trends,coverage_edge_period,bool,measure,0,boolean flag,"Raw pooled and within-surface rates 0–100, counts, eligible samples"
+tactical_trends,valid_bootstraps,int64,measure,0,count (see field name and table grain),"Raw pooled and within-surface rates 0–100, counts, eligible samples"
+tactical_trends,ci95_lower,float64,measure,14,"percentage or score (0–100), as table contract states","Raw pooled and within-surface rates 0–100, counts, eligible samples"
+tactical_trends,ci95_upper,float64,measure,14,"percentage or score (0–100), as table contract states","Raw pooled and within-surface rates 0–100, counts, eligible samples"
+tactical_trends,player_id,object,key,0,categorical/text attribute,"Raw pooled and within-surface rates 0–100, counts, eligible samples"
+tactical_standardized,player,object,attribute,0,categorical/text attribute,Equal-surface estimates 0–100; not an observed Overall scope
+tactical_standardized,period_index,int64,key,0,integer identifier; not additive,Equal-surface estimates 0–100; not an observed Overall scope
+tactical_standardized,period,object,attribute,0,categorical/text attribute,Equal-surface estimates 0–100; not an observed Overall scope
+tactical_standardized,metric,object,key,0,categorical/text attribute,Equal-surface estimates 0–100; not an observed Overall scope
+tactical_standardized,standardized_pct,float64,measure,14,percent (0–100),Equal-surface estimates 0–100; not an observed Overall scope
+tactical_standardized,surfaces_available,int64,measure,0,count (see field name and table grain),Equal-surface estimates 0–100; not an observed Overall scope
+tactical_standardized,small_sample,bool,measure,0,boolean flag,Equal-surface estimates 0–100; not an observed Overall scope
+tactical_standardized,ci95_lower,float64,measure,14,"percentage or score (0–100), as table contract states",Equal-surface estimates 0–100; not an observed Overall scope
+tactical_standardized,ci95_upper,float64,measure,14,"percentage or score (0–100), as table contract states",Equal-surface estimates 0–100; not an observed Overall scope
+tactical_standardized,valid_bootstraps,int64,measure,0,count (see field name and table grain),Equal-surface estimates 0–100; not an observed Overall scope
+tactical_standardized,player_id,object,key,0,categorical/text attribute,Equal-surface estimates 0–100; not an observed Overall scope
+tactical_changes,player,object,attribute,0,categorical/text attribute,Exploratory first/last supported-period changes in percentage points
+tactical_changes,metric,object,key,0,categorical/text attribute,Exploratory first/last supported-period changes in percentage points
+tactical_changes,first_supported_period,object,attribute,0,categorical/text attribute,Exploratory first/last supported-period changes in percentage points
+tactical_changes,last_supported_period,object,attribute,0,categorical/text attribute,Exploratory first/last supported-period changes in percentage points
+tactical_changes,change_percentage_points,float64,measure,0,percentage-point change,Exploratory first/last supported-period changes in percentage points
+tactical_changes,ci95_lower,float64,measure,0,percentage-point change,Exploratory first/last supported-period changes in percentage points
+tactical_changes,ci95_upper,float64,measure,0,percentage-point change,Exploratory first/last supported-period changes in percentage points
+tactical_changes,valid_bootstraps,int64,measure,0,count (see field name and table grain),Exploratory first/last supported-period changes in percentage points
+tactical_changes,status,object,attribute,0,categorical/text attribute,Exploratory first/last supported-period changes in percentage points
+tactical_changes,player_id,object,key,0,categorical/text attribute,Exploratory first/last supported-period changes in percentage points
+style_profiles,player,object,attribute,0,categorical/text attribute,Raw percentages 0–100 or diversity indices 0–1; unit column applies
+style_profiles,scope,object,key,0,categorical/text attribute,Raw percentages 0–100 or diversity indices 0–1; unit column applies
+style_profiles,metric,object,key,0,categorical/text attribute,Raw percentages 0–100 or diversity indices 0–1; unit column applies
+style_profiles,estimate,float64,measure,0,row-specific: see unit column,Raw percentages 0–100 or diversity indices 0–1; unit column applies
+style_profiles,unit,object,attribute,0,categorical/text attribute,Raw percentages 0–100 or diversity indices 0–1; unit column applies
+style_profiles,numerator,float64,measure,24,pooled eligible count; blank for derived composites/ratios without a single count,Raw percentages 0–100 or diversity indices 0–1; unit column applies
+style_profiles,denominator,float64,measure,0,pooled eligible count; blank for derived composites/ratios without a single count,Raw percentages 0–100 or diversity indices 0–1; unit column applies
+style_profiles,contributing_matches,int64,measure,0,count (see field name and table grain),Raw percentages 0–100 or diversity indices 0–1; unit column applies
+style_profiles,ci95_lower,float64,measure,0,row-specific: see unit column,Raw percentages 0–100 or diversity indices 0–1; unit column applies
+style_profiles,ci95_upper,float64,measure,0,row-specific: see unit column,Raw percentages 0–100 or diversity indices 0–1; unit column applies
+style_profiles,small_sample,bool,measure,0,boolean flag,Raw percentages 0–100 or diversity indices 0–1; unit column applies
+style_profiles,player_id,object,key,0,categorical/text attribute,Raw percentages 0–100 or diversity indices 0–1; unit column applies
+comparison_inputs,player,object,attribute,0,categorical/text attribute,"Raw values, primary fixed scales 0–1, alternative three-player min–max sensitivity"
+comparison_inputs,metric,object,key,0,categorical/text attribute,"Raw values, primary fixed scales 0–1, alternative three-player min–max sensitivity"
+comparison_inputs,raw_value,float64,measure,0,row-specific: see raw_unit column,"Raw values, primary fixed scales 0–1, alternative three-player min–max sensitivity"
+comparison_inputs,fixed_scale_value,float64,measure,0,fraction / fixed scale (0–1),"Raw values, primary fixed scales 0–1, alternative three-player min–max sensitivity"
+comparison_inputs,contributing_matches,int64,measure,0,count (see field name and table grain),"Raw values, primary fixed scales 0–1, alternative three-player min–max sensitivity"
+comparison_inputs,earliest_charted_date,object,attribute,0,ISO date (YYYY-MM-DD),"Raw values, primary fixed scales 0–1, alternative three-player min–max sensitivity"
+comparison_inputs,latest_charted_date,object,attribute,0,ISO date (YYYY-MM-DD),"Raw values, primary fixed scales 0–1, alternative three-player min–max sensitivity"
+comparison_inputs,three_player_min,float64,measure,0,row-specific: see raw_unit column,"Raw values, primary fixed scales 0–1, alternative three-player min–max sensitivity"
+comparison_inputs,three_player_max,float64,measure,0,row-specific: see raw_unit column,"Raw values, primary fixed scales 0–1, alternative three-player min–max sensitivity"
+comparison_inputs,alternative_minmax_value,float64,measure,0,fraction / fixed scale (0–1),"Raw values, primary fixed scales 0–1, alternative three-player min–max sensitivity"
+comparison_inputs,raw_unit,object,attribute,0,categorical/text attribute,"Raw values, primary fixed scales 0–1, alternative three-player min–max sensitivity"
+comparison_inputs,player_id,object,key,0,categorical/text attribute,"Raw values, primary fixed scales 0–1, alternative three-player min–max sensitivity"
+comparison_inputs_wide,winning,float64,measure,0,fraction / fixed scale (0–1),Four primary fixed scales 0–1 for custom point weights
+comparison_inputs_wide,dominance,float64,measure,0,fraction / fixed scale (0–1),Four primary fixed scales 0–1 for custom point weights
+comparison_inputs_wide,clutch,float64,measure,0,fraction / fixed scale (0–1),Four primary fixed scales 0–1 for custom point weights
+comparison_inputs_wide,adaptability,float64,measure,0,fraction / fixed scale (0–1),Four primary fixed scales 0–1 for custom point weights
+comparison_inputs_wide,player,object,attribute,0,categorical/text attribute,Four primary fixed scales 0–1 for custom point weights
+comparison_inputs_wide,player_id,object,key,0,categorical/text attribute,Four primary fixed scales 0–1 for custom point weights
+comparison_bootstrap_inputs,winning,float64,measure,0,fraction / fixed scale (0–1),Joint paired scaled draws; do not break replicate/player dependence
+comparison_bootstrap_inputs,dominance,float64,measure,0,fraction / fixed scale (0–1),Joint paired scaled draws; do not break replicate/player dependence
+comparison_bootstrap_inputs,clutch,float64,measure,0,fraction / fixed scale (0–1),Joint paired scaled draws; do not break replicate/player dependence
+comparison_bootstrap_inputs,adaptability,float64,measure,0,fraction / fixed scale (0–1),Joint paired scaled draws; do not break replicate/player dependence
+comparison_bootstrap_inputs,replicate_id,int64,key,0,integer identifier; not additive,Joint paired scaled draws; do not break replicate/player dependence
+comparison_bootstrap_inputs,player,object,attribute,0,categorical/text attribute,Joint paired scaled draws; do not break replicate/player dependence
+comparison_bootstrap_inputs,player_id,object,key,0,categorical/text attribute,Joint paired scaled draws; do not break replicate/player dependence
+preference_scores,scenario,object,key,0,categorical/text attribute,"Scenario scores 0–100, rank frequencies 0–100 and conditional intervals"
+preference_scores,player,object,attribute,0,categorical/text attribute,"Scenario scores 0–100, rank frequencies 0–100 and conditional intervals"
+preference_scores,score,float64,measure,0,score (0–100),"Scenario scores 0–100, rank frequencies 0–100 and conditional intervals"
+preference_scores,score_boot_median,float64,measure,0,score (0–100),"Scenario scores 0–100, rank frequencies 0–100 and conditional intervals"
+preference_scores,ci95_lower,float64,measure,0,"percentage or score (0–100), as table contract states","Scenario scores 0–100, rank frequencies 0–100 and conditional intervals"
+preference_scores,ci95_upper,float64,measure,0,"percentage or score (0–100), as table contract states","Scenario scores 0–100, rank frequencies 0–100 and conditional intervals"
+preference_scores,point_estimate_rank,int64,measure,0,ordinal rank,"Scenario scores 0–100, rank frequencies 0–100 and conditional intervals"
+preference_scores,bootstrap_first_place_pct,float64,measure,0,percent (0–100),"Scenario scores 0–100, rank frequencies 0–100 and conditional intervals"
+preference_scores,bootstrap_second_place_pct,float64,measure,0,percent (0–100),"Scenario scores 0–100, rank frequencies 0–100 and conditional intervals"
+preference_scores,bootstrap_third_place_pct,float64,measure,0,percent (0–100),"Scenario scores 0–100, rank frequencies 0–100 and conditional intervals"
+preference_scores,paired_valid_bootstraps,int64,measure,0,count (see field name and table grain),"Scenario scores 0–100, rank frequencies 0–100 and conditional intervals"
+preference_scores,player_id,object,key,0,categorical/text attribute,"Scenario scores 0–100, rank frequencies 0–100 and conditional intervals"
+preference_weights,scenario,object,key,0,categorical/text attribute,Scenario weights are nonnegative fractions summing to one
+preference_weights,metric,object,key,0,categorical/text attribute,Scenario weights are nonnegative fractions summing to one
+preference_weights,weight,float64,measure,0,fraction / fixed scale (0–1),Scenario weights are nonnegative fractions summing to one
+preference_contributions,scenario,object,key,0,categorical/text attribute,"Contributions sum to scenario/player score, not independent achievements"
+preference_contributions,player,object,attribute,0,categorical/text attribute,"Contributions sum to scenario/player score, not independent achievements"
+preference_contributions,metric,object,key,0,categorical/text attribute,"Contributions sum to scenario/player score, not independent achievements"
+preference_contributions,weight,float64,measure,0,fraction / fixed scale (0–1),"Contributions sum to scenario/player score, not independent achievements"
+preference_contributions,fixed_scale_value,float64,measure,0,fraction / fixed scale (0–1),"Contributions sum to scenario/player score, not independent achievements"
+preference_contributions,score_contribution,float64,measure,0,score (0–100),"Contributions sum to scenario/player score, not independent achievements"
+preference_contributions,player_id,object,key,0,categorical/text attribute,"Contributions sum to scenario/player score, not independent achievements"
+score_differences,scenario,object,key,0,categorical/text attribute,"Paired score differences and bootstrap-ahead frequency, not p-values"
+score_differences,comparison,object,key,0,categorical/text attribute,"Paired score differences and bootstrap-ahead frequency, not p-values"
+score_differences,point_score_difference,float64,measure,0,preference-score-point difference,"Paired score differences and bootstrap-ahead frequency, not p-values"
+score_differences,ci95_lower,float64,measure,0,preference-score-point difference,"Paired score differences and bootstrap-ahead frequency, not p-values"
+score_differences,ci95_upper,float64,measure,0,preference-score-point difference,"Paired score differences and bootstrap-ahead frequency, not p-values"
+score_differences,bootstrap_a_ahead_pct,float64,measure,0,percent (0–100),"Paired score differences and bootstrap-ahead frequency, not p-values"
+surface_preference_scores,player,object,attribute,0,categorical/text attribute,"Illustrative equal winning/DR/CI score 0–100, SAS omitted"
+surface_preference_scores,scope,object,key,0,categorical/text attribute,"Illustrative equal winning/DR/CI score 0–100, SAS omitted"
+surface_preference_scores,illustrative_score,float64,measure,0,score (0–100),"Illustrative equal winning/DR/CI score 0–100, SAS omitted"
+surface_preference_scores,small_ci_sample,bool,measure,0,boolean flag,"Illustrative equal winning/DR/CI score 0–100, SAS omitted"
+surface_preference_scores,ci95_lower,float64,measure,0,"percentage or score (0–100), as table contract states","Illustrative equal winning/DR/CI score 0–100, SAS omitted"
+surface_preference_scores,ci95_upper,float64,measure,0,"percentage or score (0–100), as table contract states","Illustrative equal winning/DR/CI score 0–100, SAS omitted"
+surface_preference_scores,bootstrap_first_place_pct,float64,measure,0,percent (0–100),"Illustrative equal winning/DR/CI score 0–100, SAS omitted"
+surface_preference_scores,paired_valid_bootstraps,int64,measure,0,count (see field name and table grain),"Illustrative equal winning/DR/CI score 0–100, SAS omitted"
+surface_preference_scores,player_id,object,key,0,categorical/text attribute,"Illustrative equal winning/DR/CI score 0–100, SAS omitted"
+head_to_head,player_a,object,attribute,0,categorical/text attribute,"Charted rivalry outcomes; unknown matches retained, rates 0–100"
+head_to_head,player_b,object,attribute,0,categorical/text attribute,"Charted rivalry outcomes; unknown matches retained, rates 0–100"
+head_to_head,scope,object,key,0,categorical/text attribute,"Charted rivalry outcomes; unknown matches retained, rates 0–100"
+head_to_head,charted_meetings,int64,measure,0,count (see field name and table grain),"Charted rivalry outcomes; unknown matches retained, rates 0–100"
+head_to_head,known_outcomes,int64,measure,0,count (see field name and table grain),"Charted rivalry outcomes; unknown matches retained, rates 0–100"
+head_to_head,unknown_outcomes,int64,measure,0,count (see field name and table grain),"Charted rivalry outcomes; unknown matches retained, rates 0–100"
+head_to_head,a_verified_wins,int64,measure,0,count (see field name and table grain),"Charted rivalry outcomes; unknown matches retained, rates 0–100"
+head_to_head,b_verified_wins,int64,measure,0,count (see field name and table grain),"Charted rivalry outcomes; unknown matches retained, rates 0–100"
+head_to_head,a_win_pct,float64,measure,0,percent (0–100),"Charted rivalry outcomes; unknown matches retained, rates 0–100"
+head_to_head,a_win_pct_ci95_lower,float64,measure,1,percent (0–100),"Charted rivalry outcomes; unknown matches retained, rates 0–100"
+head_to_head,a_win_pct_ci95_upper,float64,measure,1,percent (0–100),"Charted rivalry outcomes; unknown matches retained, rates 0–100"
+head_to_head,small_sample,bool,measure,0,boolean flag,"Charted rivalry outcomes; unknown matches retained, rates 0–100"
+head_to_head,player_a_id,object,key,0,categorical/text attribute,"Charted rivalry outcomes; unknown matches retained, rates 0–100"
+head_to_head,player_b_id,object,key,0,categorical/text attribute,"Charted rivalry outcomes; unknown matches retained, rates 0–100"
+scorecard,player,object,attribute,0,categorical/text attribute,Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,scope,object,key,0,categorical/text attribute,Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,charted_matches,int64,measure,0,count (see field name and table grain),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,verified_wins,int64,measure,0,count (see field name and table grain),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,known_outcome_matches,int64,measure,0,count (see field name and table grain),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,unknown_outcome_matches,int64,measure,0,count (see field name and table grain),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,matches_with_overview,int64,measure,0,count (see field name and table grain),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,matches_with_points,int64,measure,0,count (see field name and table grain),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,earliest_charted_date,object,attribute,0,ISO date (YYYY-MM-DD),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,latest_charted_date,object,attribute,0,ISO date (YYYY-MM-DD),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,handedness,object,attribute,0,categorical/text attribute,Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,handedness_resolution,object,attribute,0,categorical/text attribute,Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,handedness_conflicting_records,int64,measure,0,count (see field name and table grain),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,weeks_at_no_1,Float64,measure,12,weeks; unavailable in supplied sources,Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,ace_pct,float64,measure,0,percent (0–100),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,break_point_conversion_pct,float64,measure,0,percent (0–100),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,break_point_save_pct,float64,measure,0,percent (0–100),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,dominance_ratio,float64,measure,0,ratio,Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,double_fault_pct,float64,measure,0,percent (0–100),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,first_serve_in_pct,float64,measure,0,percent (0–100),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,first_serve_win_pct,float64,measure,0,percent (0–100),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,match_win_pct,float64,measure,0,percent (0–100),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,point_win_pct,float64,measure,0,percent (0–100),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,return_break_pct,float64,measure,0,percent (0–100),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,return_point_win_pct,float64,measure,0,percent (0–100),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,second_serve_win_pct,float64,measure,0,percent (0–100),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,service_hold_pct,float64,measure,0,percent (0–100),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,service_point_win_pct,float64,measure,0,percent (0–100),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,clutch_index_full,float64,measure,0,fraction (0–1),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,clutch_index_full_ci95_lower,float64,measure,0,fraction (0–1),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,clutch_index_full_ci95_upper,float64,measure,0,fraction (0–1),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,common_ci_matches,int64,measure,0,count (see field name and table grain),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,clutch_status,object,attribute,0,categorical/text attribute,Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,approach_frequency_pct,float64,measure,0,percent (0–100),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,net_point_frequency_pct,float64,measure,0,percent (0–100),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,net_point_success_pct,float64,measure,0,percent (0–100),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,serve_volley_frequency_pct,float64,measure,0,percent (0–100),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,short_rally_share_pct,float64,measure,0,percent (0–100),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,long_rally_share_pct,float64,measure,0,percent (0–100),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,groundstroke_share_pct,float64,measure,0,percent (0–100),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,slice_share_pct,float64,measure,0,percent (0–100),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,drop_shot_share_pct,float64,measure,0,percent (0–100),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,source_winner_rate_pct,float64,measure,0,percent (0–100),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,source_unforced_error_rate_pct,float64,measure,0,percent (0–100),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,shot_family_diversity,float64,measure,0,normalized entropy (0–1),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,directional_diversity,float64,measure,0,normalized entropy (0–1),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,surface_adaptability_score,float64,measure,9,score (0–100),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,surface_adaptability_score_ci95_lower,float64,measure,9,score (0–100),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,surface_adaptability_score_ci95_upper,float64,measure,9,score (0–100),Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,tactical_evolution,object,attribute,0,categorical/text attribute,Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,tactical_innovation_composite,object,attribute,0,categorical/text attribute,Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,player_id,object,key,0,categorical/text attribute,Consolidated wide KPIs; units follow named metrics; SAS only Overall
+scorecard,weeks_at_no_1_availability,object,attribute,0,categorical/text attribute,Consolidated wide KPIs; units follow named metrics; SAS only Overall
+source_manifest,relative_path,object,key,0,categorical/text attribute,"Local input filenames, byte counts and SHA-256 fingerprints"
+source_manifest,bytes,int64,measure,0,bytes,"Local input filenames, byte counts and SHA-256 fingerprints"
+source_manifest,sha256,object,attribute,0,categorical/text attribute,"Local input filenames, byte counts and SHA-256 fingerprints"
+source_manifest,raw_rows,object,attribute,2,source rows,"Local input filenames, byte counts and SHA-256 fingerprints"
+source_manifest,role,object,attribute,0,categorical/text attribute,"Local input filenames, byte counts and SHA-256 fingerprints"
+audit_summary,dataset,object,key,0,categorical/text attribute,Raw = duplicates removed + quarantined + eligible; counts are not rates
+audit_summary,key,object,attribute,0,categorical/text attribute,Raw = duplicates removed + quarantined + eligible; counts are not rates
+audit_summary,raw_rows,int64,measure,0,source rows,Raw = duplicates removed + quarantined + eligible; counts are not rates
+audit_summary,exact_duplicates_removed,int64,measure,0,count (see field name and table grain),Raw = duplicates removed + quarantined + eligible; counts are not rates
+audit_summary,missing_key_rows,int64,measure,0,count (see field name and table grain),Raw = duplicates removed + quarantined + eligible; counts are not rates
+audit_summary,conflicting_key_rows,int64,measure,0,count (see field name and table grain),Raw = duplicates removed + quarantined + eligible; counts are not rates
+audit_summary,conflicting_keys,int64,measure,0,count (see field name and table grain),Raw = duplicates removed + quarantined + eligible; counts are not rates
+audit_summary,quarantined_rows,int64,measure,0,count (see field name and table grain),Raw = duplicates removed + quarantined + eligible; counts are not rates
+audit_summary,eligible_rows,int64,measure,0,count (see field name and table grain),Raw = duplicates removed + quarantined + eligible; counts are not rates
+audit_summary,rows_after_shared_quarantine,int64,measure,0,count (see field name and table grain),Raw = duplicates removed + quarantined + eligible; counts are not rates
+player_metadata_evidence,player,object,attribute,0,categorical/text attribute,Source-consensus player profile; supporting/conflicting/missing record counts
+player_metadata_evidence,hand_code,object,attribute,0,categorical/text attribute,Source-consensus player profile; supporting/conflicting/missing record counts
+player_metadata_evidence,handedness,object,attribute,0,categorical/text attribute,Source-consensus player profile; supporting/conflicting/missing record counts
+player_metadata_evidence,supporting_records,int64,measure,0,count (see field name and table grain),Source-consensus player profile; supporting/conflicting/missing record counts
+player_metadata_evidence,recognized_records,int64,measure,0,count (see field name and table grain),Source-consensus player profile; supporting/conflicting/missing record counts
+player_metadata_evidence,conflicting_records,int64,measure,0,count (see field name and table grain),Source-consensus player profile; supporting/conflicting/missing record counts
+player_metadata_evidence,missing_or_unrecognized_records,int64,measure,0,count (see field name and table grain),Source-consensus player profile; supporting/conflicting/missing record counts
+player_metadata_evidence,consensus_pct,float64,measure,0,percent (0–100),Source-consensus player profile; supporting/conflicting/missing record counts
+player_metadata_evidence,resolution_status,object,attribute,0,categorical/text attribute,Source-consensus player profile; supporting/conflicting/missing record counts
+player_metadata_evidence,evidence_source,object,attribute,0,categorical/text attribute,Source-consensus player profile; supporting/conflicting/missing record counts
+player_metadata_evidence,player_id,object,key,0,categorical/text attribute,Source-consensus player profile; supporting/conflicting/missing record counts
+handedness_raw_values,player,object,attribute,0,categorical/text attribute,"Every original hand label, preserved via repr; record counts"
+handedness_raw_values,source_column,object,key,0,categorical/text attribute,"Every original hand label, preserved via repr; record counts"
+handedness_raw_values,raw_representation,object,key,0,categorical/text attribute,"Every original hand label, preserved via repr; record counts"
+handedness_raw_values,records,int64,measure,0,count (see field name and table grain),"Every original hand label, preserved via repr; record counts"
+handedness_raw_values,player_id,object,key,0,categorical/text attribute,"Every original hand label, preserved via repr; record counts"
+handedness_exceptions,match_id,object,key,0,categorical/text attribute,Contradictory or missing hand records; no silent source overrides
+handedness_exceptions,player,object,attribute,0,categorical/text attribute,Contradictory or missing hand records; no silent source overrides
+handedness_exceptions,source_column,object,key,0,categorical/text attribute,Contradictory or missing hand records; no silent source overrides
+handedness_exceptions,raw_representation,object,attribute,0,categorical/text attribute,Contradictory or missing hand records; no silent source overrides
+handedness_exceptions,normalized_hand,object,attribute,4,categorical/text attribute,Contradictory or missing hand records; no silent source overrides
+handedness_exceptions,hand_code,object,attribute,0,categorical/text attribute,Contradictory or missing hand records; no silent source overrides
+handedness_exceptions,exception_type,object,attribute,0,categorical/text attribute,Contradictory or missing hand records; no silent source overrides
+handedness_exceptions,player_id,object,key,0,categorical/text attribute,Contradictory or missing hand records; no silent source overrides
+issue_disposition,issue,object,key,0,categorical/text attribute,Resolved versus known source limitations; scope-specific counts are not additive
+issue_disposition,status,object,attribute,0,categorical/text attribute,Resolved versus known source limitations; scope-specific counts are not additive
+issue_disposition,affected_count,int64,measure,0,count (see field name and table grain),Resolved versus known source limitations; scope-specific counts are not additive
+issue_disposition,handling,object,attribute,0,categorical/text attribute,Resolved versus known source limitations; scope-specific counts are not additive
+metric_contract,analysis,object,key,0,categorical/text attribute,"Formula, unit, eligible analytical inputs, pooling and uncertainty contract"
+metric_contract,metric,object,key,0,categorical/text attribute,"Formula, unit, eligible analytical inputs, pooling and uncertainty contract"
+metric_contract,formula,object,attribute,0,categorical/text attribute,"Formula, unit, eligible analytical inputs, pooling and uncertainty contract"
+metric_contract,unit,object,attribute,0,categorical/text attribute,"Formula, unit, eligible analytical inputs, pooling and uncertainty contract"
+metric_contract,eligible_inputs,object,attribute,0,categorical/text attribute,"Formula, unit, eligible analytical inputs, pooling and uncertainty contract"
+metric_contract,aggregation,object,attribute,0,categorical/text attribute,"Formula, unit, eligible analytical inputs, pooling and uncertainty contract"
+metric_contract,uncertainty,object,attribute,0,categorical/text attribute,"Formula, unit, eligible analytical inputs, pooling and uncertainty contract"
+metric_contract,interpretation,object,attribute,0,categorical/text attribute,"Formula, unit, eligible analytical inputs, pooling and uncertainty contract"
+pressure_diagnostics,model,object,key,0,categorical/text attribute,"Numerical fit diagnostics; probabilities 0–1, score residual per observation"
+pressure_diagnostics,observations,int64,measure,0,count (see field name and table grain),"Numerical fit diagnostics; probabilities 0–1, score residual per observation"
+pressure_diagnostics,match_clusters,int64,measure,0,count (see field name and table grain),"Numerical fit diagnostics; probabilities 0–1, score residual per observation"
+pressure_diagnostics,max_absolute_score_per_observation,float64,measure,0,absolute likelihood score / observation,"Numerical fit diagnostics; probabilities 0–1, score residual per observation"
+pressure_diagnostics,minimum_fitted_probability,float64,measure,0,probability (0–1),"Numerical fit diagnostics; probabilities 0–1, score residual per observation"
+pressure_diagnostics,maximum_fitted_probability,float64,measure,0,probability (0–1),"Numerical fit diagnostics; probabilities 0–1, score residual per observation"
+pressure_diagnostics,minimum_covariance_eigenvalue,float64,measure,0,coefficient covariance eigenvalue (log-odds parameterization),"Numerical fit diagnostics; probabilities 0–1, score residual per observation"
+pressure_context_effects,model,object,key,0,categorical/text attribute,Conditional odds ratio for +10 percentage points of opponent proxy; not causal
+pressure_context_effects,opponent_proxy_change,object,attribute,0,categorical/text attribute,Conditional odds ratio for +10 percentage points of opponent proxy; not causal
+pressure_context_effects,conditional_odds_ratio,float64,measure,0,odds ratio,Conditional odds ratio for +10 percentage points of opponent proxy; not causal
+pressure_context_effects,ci95_lower,float64,measure,0,odds ratio,Conditional odds ratio for +10 percentage points of opponent proxy; not causal
+pressure_context_effects,ci95_upper,float64,measure,0,odds ratio,Conditional odds ratio for +10 percentage points of opponent proxy; not causal
+pressure_context_effects,interpretation,object,attribute,0,categorical/text attribute,Conditional odds ratio for +10 percentage points of opponent proxy; not causal
+audit_review_register,issue,object,key,0,categorical/text attribute,Review scopes and metric-specific handling; flags are not all corrupt matches
+audit_review_register,count,int64,measure,0,count (see field name and table grain),Review scopes and metric-specific handling; flags are not all corrupt matches
+audit_review_register,next_action,object,attribute,0,categorical/text attribute,Review scopes and metric-specific handling; flags are not all corrupt matches

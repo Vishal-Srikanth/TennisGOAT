@@ -1,0 +1,193 @@
+player,scope,metric,estimate,unit,numerator,denominator,contributing_matches,ci95_lower,ci95_upper,small_sample,player_id
+Roger Federer,Overall,service_point_win_pct,69.2828833712,%,40906,59042,712,68.7431531705,69.7997723861,False,federer
+Roger Federer,Overall,return_point_win_pct,39.2281587878,%,24853,63355,711,38.6788924499,39.7628163948,False,federer
+Roger Federer,Overall,ace_pct,10.1775007622,%,6009,59042,712,9.76285746468,10.5734794816,False,federer
+Roger Federer,Overall,approach_frequency_pct,15.2480589996,%,18029,118238,687,14.7242822508,15.7646857965,False,federer
+Roger Federer,Overall,net_point_frequency_pct,16.938196907,%,20492,120981,703,16.4162871615,17.4717969561,False,federer
+Roger Federer,Overall,serve_volley_frequency_pct,10.2107220328,%,5931,58086,702,9.32862927838,11.1062986373,False,federer
+Roger Federer,Overall,drop_shot_share_pct,0.969361810323,%,2135,220248,722,0.906335332067,1.03874138628,False,federer
+Roger Federer,Overall,slice_share_pct,19.2519341833,%,42402,220248,722,18.8070382679,19.6981376779,False,federer
+Roger Federer,Overall,short_rally_share_pct,68.2920361316,%,82408,120670,722,67.7083642859,68.8897407039,False,federer
+Roger Federer,Overall,long_rally_share_pct,9.82348553907,%,11854,120670,722,9.46329036091,10.1864015563,False,federer
+Roger Federer,Overall,source_winner_rate_pct,19.7526884387,%,23897,120981,703,19.3831949328,20.0952712417,False,federer
+Roger Federer,Overall,source_unforced_error_rate_pct,16.5554921847,%,20029,120981,703,16.1794711106,16.9259000521,False,federer
+Roger Federer,Overall,net_point_success_pct,70.5934023033,%,14466,20492,703,69.9216166862,71.2556658615,False,federer
+Roger Federer,Overall,groundstroke_share_pct,71.8431087707,%,158256,220280,722,71.3538866002,72.331467708,False,federer
+Roger Federer,Overall,shot_family_diversity,0.410473462567,index (0–1),,220248,722,0.405867962129,0.415117302209,False,federer
+Roger Federer,Overall,directional_diversity,0.859927349116,index (0–1),,132560,719,0.856721837797,0.863012132386,False,federer
+Roger Federer,Clay,service_point_win_pct,65.7521802326,%,7238,11008,127,64.4150119446,67.0653212749,False,federer
+Roger Federer,Clay,return_point_win_pct,39.9061833689,%,4679,11725,129,38.7585703588,41.0536887674,False,federer
+Roger Federer,Clay,ace_pct,7.29469476744,%,803,11008,127,6.51091861786,8.13014431718,False,federer
+Roger Federer,Clay,approach_frequency_pct,14.5967297446,%,3178,21772,122,13.393790537,15.7619970874,False,federer
+Roger Federer,Clay,net_point_frequency_pct,16.2695225346,%,3646,22410,126,15.0515977499,17.4704003397,False,federer
+Roger Federer,Clay,serve_volley_frequency_pct,7.62124711316,%,825,10825,125,6.13995367778,9.43705362358,False,federer
+Roger Federer,Clay,drop_shot_share_pct,1.52028133942,%,696,45781,130,1.34240469177,1.70391340047,False,federer
+Roger Federer,Clay,slice_share_pct,15.3251348813,%,7016,45781,130,14.3760988973,16.3394683776,False,federer
+Roger Federer,Clay,short_rally_share_pct,63.6570054762,%,14298,22461,130,62.2528865305,65.1590656301,False,federer
+Roger Federer,Clay,long_rally_share_pct,12.2434441922,%,2750,22461,130,11.4602565319,13.0712829509,False,federer
+Roger Federer,Clay,source_winner_rate_pct,18.6702365016,%,4184,22410,126,17.864574035,19.5042142436,False,federer
+Roger Federer,Clay,source_unforced_error_rate_pct,18.7371709058,%,4199,22410,126,17.8696489589,19.6587889465,False,federer
+Roger Federer,Clay,net_point_success_pct,69.4459681843,%,2532,3646,126,67.7825395783,71.1630133711,False,federer
+Roger Federer,Clay,groundstroke_share_pct,76.5051427074,%,35034,45793,130,75.4084856453,77.5922957752,False,federer
+Roger Federer,Clay,shot_family_diversity,0.372904591333,index (0–1),,45781,130,0.362128519171,0.383463225193,False,federer
+Roger Federer,Clay,directional_diversity,0.867791766584,index (0–1),,29093,130,0.860500974814,0.874737201652,False,federer
+Roger Federer,Grass,service_point_win_pct,72.7910743207,%,8090,11114,119,71.5910637019,73.9207698647,False,federer
+Roger Federer,Grass,return_point_win_pct,36.9976943347,%,4493,12144,119,35.8381885383,38.2191972092,False,federer
+Roger Federer,Grass,ace_pct,11.8859096635,%,1321,11114,119,10.9652341028,12.8468368361,False,federer
+Roger Federer,Grass,approach_frequency_pct,16.1962912709,%,3581,22110,114,14.8112685512,17.6199721394,False,federer
+Roger Federer,Grass,net_point_frequency_pct,17.6799380858,%,4112,23258,119,16.2835020207,19.1147258238,False,federer
+Roger Federer,Grass,serve_volley_frequency_pct,15.0217371196,%,1624,10811,117,11.8745005832,18.5353478001,False,federer
+Roger Federer,Grass,drop_shot_share_pct,0.879790444735,%,309,35122,119,0.751526736904,1.01204102053,False,federer
+Roger Federer,Grass,slice_share_pct,21.6901087637,%,7618,35122,119,20.5986423623,22.8644919963,False,federer
+Roger Federer,Grass,short_rally_share_pct,74.0003522987,%,16804,22708,119,72.6612520306,75.4883615162,False,federer
+Roger Federer,Grass,long_rally_share_pct,6.63202395631,%,1506,22708,119,5.86583234943,7.33243826842,False,federer
+Roger Federer,Grass,source_winner_rate_pct,20.4273798263,%,4751,23258,119,19.7284198871,21.0884767275,False,federer
+Roger Federer,Grass,source_unforced_error_rate_pct,13.10946771,%,3049,23258,119,12.3067378896,13.9363540608,False,federer
+Roger Federer,Grass,net_point_success_pct,71.8142023346,%,2953,4112,119,70.0886574072,73.5084077315,False,federer
+Roger Federer,Grass,groundstroke_share_pct,67.6820588738,%,23774,35126,119,66.4903552877,68.8655858635,False,federer
+Roger Federer,Grass,shot_family_diversity,0.451174536185,index (0–1),,35122,119,0.438864278949,0.463912409981,False,federer
+Roger Federer,Grass,directional_diversity,0.86577815603,index (0–1),,18665,117,0.858038126792,0.8728662926,False,federer
+Roger Federer,Hard,service_point_win_pct,69.2795232936,%,25578,36920,466,68.6554643024,69.9275679809,False,federer
+Roger Federer,Hard,return_point_win_pct,39.7128096034,%,15681,39486,463,39.0320164052,40.4004357516,False,federer
+Roger Federer,Hard,ace_pct,10.522751896,%,3885,36920,466,10.0439908934,11.0003495049,False,federer
+Roger Federer,Hard,approach_frequency_pct,15.1568131691,%,11270,74356,451,14.5286462343,15.7988081237,False,federer
+Roger Federer,Hard,net_point_frequency_pct,16.9081035147,%,12734,75313,458,16.2975662986,17.5407170477,False,federer
+Roger Federer,Hard,serve_volley_frequency_pct,9.55281207133,%,3482,36450,460,8.65915883637,10.4511808444,False,federer
+Roger Federer,Hard,drop_shot_share_pct,0.810936883275,%,1130,139345,473,0.739525469636,0.883417679553,False,federer
+Roger Federer,Hard,slice_share_pct,19.9275180308,%,27768,139345,473,19.4471729249,20.3838499731,False,federer
+Roger Federer,Hard,short_rally_share_pct,67.9540668336,%,51306,75501,473,67.2801916378,68.5527319455,False,federer
+Roger Federer,Hard,long_rally_share_pct,10.0634428683,%,7598,75501,473,9.65566730893,10.5070781506,False,federer
+Roger Federer,Hard,source_winner_rate_pct,19.8664241233,%,14962,75313,458,19.4096868682,20.3327698751,False,federer
+Roger Federer,Hard,source_unforced_error_rate_pct,16.9705097394,%,12781,75313,458,16.5083574426,17.4027004873,False,federer
+Roger Federer,Hard,net_point_success_pct,70.5277210617,%,8981,12734,458,69.7075731534,71.3663568172,False,federer
+Roger Federer,Hard,groundstroke_share_pct,71.3599931114,%,99448,139361,473,70.8158732268,71.9223846167,False,federer
+Roger Federer,Hard,shot_family_diversity,0.410531130779,index (0–1),,139345,473,0.405161068561,0.41582631799,False,federer
+Roger Federer,Hard,directional_diversity,0.855622358432,index (0–1),,84802,472,0.851858343274,0.859307558782,False,federer
+Rafael Nadal,Overall,service_point_win_pct,65.9578228087,%,22394,33952,416,65.2162679939,66.6605598417,False,nadal
+Rafael Nadal,Overall,return_point_win_pct,40.1743106158,%,14059,34995,411,39.4166232815,40.9581214992,False,nadal
+Rafael Nadal,Overall,ace_pct,4.27662582469,%,1452,33952,416,3.92681130337,4.63913980217,False,nadal
+Rafael Nadal,Overall,approach_frequency_pct,6.72831391747,%,4453,66183,398,6.34396033328,7.14116885747,False,nadal
+Rafael Nadal,Overall,net_point_frequency_pct,9.07434024331,%,6124,67487,406,8.67055346775,9.5061450034,False,nadal
+Rafael Nadal,Overall,serve_volley_frequency_pct,1.37465189311,%,464,33754,414,1.15275028262,1.62678716516,False,nadal
+Rafael Nadal,Overall,drop_shot_share_pct,0.813013486537,%,1234,151781,423,0.743653982421,0.88654855531,False,nadal
+Rafael Nadal,Overall,slice_share_pct,9.51568378124,%,14443,151781,423,8.9984698918,10.0707418605,False,nadal
+Rafael Nadal,Overall,short_rally_share_pct,59.3834599598,%,40800,68706,423,58.4433101181,60.3361990128,False,nadal
+Rafael Nadal,Overall,long_rally_share_pct,15.8312228917,%,10877,68706,423,15.1742526071,16.5440214614,False,nadal
+Rafael Nadal,Overall,source_winner_rate_pct,15.1392119964,%,10217,67487,406,14.707483525,15.5829992275,False,nadal
+Rafael Nadal,Overall,source_unforced_error_rate_pct,13.9211996384,%,9395,67487,406,13.4948236517,14.345164277,False,nadal
+Rafael Nadal,Overall,net_point_success_pct,74.8327076873,%,4585,6127,407,73.5954073697,76.0538056583,False,nadal
+Rafael Nadal,Overall,groundstroke_share_pct,85.980157057,%,130511,151792,423,85.401071172,86.5466344696,False,nadal
+Rafael Nadal,Overall,shot_family_diversity,0.256996702209,index (0–1),,151781,423,0.25018580479,0.263878105477,False,nadal
+Rafael Nadal,Overall,directional_diversity,0.858666996348,index (0–1),,105412,422,0.852556380832,0.865841607199,False,nadal
+Rafael Nadal,Clay,service_point_win_pct,65.031684635,%,7902,12151,161,63.8652738436,66.2416487489,False,nadal
+Rafael Nadal,Clay,return_point_win_pct,44.8228991765,%,5606,12507,157,43.6277571567,46.0267622246,False,nadal
+Rafael Nadal,Clay,ace_pct,2.6088387787,%,317,12151,161,2.2827072115,2.95831406983,False,nadal
+Rafael Nadal,Clay,approach_frequency_pct,5.86901763224,%,1398,23820,153,5.34250710521,6.43606532936,False,nadal
+Rafael Nadal,Clay,net_point_frequency_pct,8.61059190031,%,2073,24075,155,7.99974547682,9.25884091422,False,nadal
+Rafael Nadal,Clay,serve_volley_frequency_pct,0.666611801498,%,81,12151,161,0.475937001195,0.879387993068,False,nadal
+Rafael Nadal,Clay,drop_shot_share_pct,1.05197921467,%,662,62929,166,0.938299433832,1.18285176968,False,nadal
+Rafael Nadal,Clay,slice_share_pct,6.29121708592,%,3959,62929,166,5.88805813138,6.73106348763,False,nadal
+Rafael Nadal,Clay,short_rally_share_pct,53.2888959847,%,13351,25054,166,52.0428261067,54.6240627717,False,nadal
+Rafael Nadal,Clay,long_rally_share_pct,19.4020914824,%,4861,25054,166,18.3193470074,20.4847099581,False,nadal
+Rafael Nadal,Clay,source_winner_rate_pct,15.0737279335,%,3629,24075,155,14.383205379,15.7730176511,False,nadal
+Rafael Nadal,Clay,source_unforced_error_rate_pct,14.4797507788,%,3486,24075,155,13.8089146207,15.1503751057,False,nadal
+Rafael Nadal,Clay,net_point_success_pct,75.1445086705,%,1560,2076,156,72.8319663296,77.3387853623,False,nadal
+Rafael Nadal,Clay,groundstroke_share_pct,89.4128863113,%,56272,62935,166,88.8892092548,89.9290254588,False,nadal
+Rafael Nadal,Clay,shot_family_diversity,0.217192217811,index (0–1),,62929,166,0.208741607943,0.225630151055,False,nadal
+Rafael Nadal,Clay,directional_diversity,0.860685281011,index (0–1),,44589,165,0.848760646052,0.873881419227,False,nadal
+Rafael Nadal,Grass,service_point_win_pct,68.6711930165,%,2832,4124,39,66.6142970561,70.8796809568,False,nadal
+Rafael Nadal,Grass,return_point_win_pct,35.2794184462,%,1553,4402,40,33.32613237,37.4806250773,False,nadal
+Rafael Nadal,Grass,ace_pct,7.00775945684,%,289,4124,39,5.72665473875,8.52229533143,False,nadal
+Rafael Nadal,Grass,approach_frequency_pct,8.38986076401,%,705,8403,39,7.00540091544,9.63388012742,False,nadal
+Rafael Nadal,Grass,net_point_frequency_pct,10.9008687374,%,916,8403,39,9.56086772555,12.2274911153,False,nadal
+Rafael Nadal,Grass,serve_volley_frequency_pct,1.67374469148,%,67,4003,38,1.12736911828,2.31062315769,False,nadal
+Rafael Nadal,Grass,drop_shot_share_pct,1.12431509286,%,158,14053,39,0.854529470049,1.40199657734,False,nadal
+Rafael Nadal,Grass,slice_share_pct,15.0074717142,%,2109,14053,39,13.2011707998,16.9706929613,False,nadal
+Rafael Nadal,Grass,short_rally_share_pct,68.8093498904,%,5652,8214,39,66.4637488104,71.2839821168,False,nadal
+Rafael Nadal,Grass,long_rally_share_pct,9.48380813246,%,779,8214,39,8.03176520809,10.9479814825,False,nadal
+Rafael Nadal,Grass,source_winner_rate_pct,17.1010353445,%,1437,8403,39,16.0332140821,18.2627141487,False,nadal
+Rafael Nadal,Grass,source_unforced_error_rate_pct,11.81720814,%,993,8403,39,10.665450796,13.0027005409,False,nadal
+Rafael Nadal,Grass,net_point_success_pct,75.4366812227,%,691,916,39,72.6876797644,78.2507754059,False,nadal
+Rafael Nadal,Grass,groundstroke_share_pct,79.0267501423,%,11108,14056,39,76.9710888941,80.934042889,False,nadal
+Rafael Nadal,Grass,shot_family_diversity,0.33520898898,index (0–1),,14053,39,0.31427094165,0.356346995996,False,nadal
+Rafael Nadal,Grass,directional_diversity,0.858645678232,index (0–1),,9114,40,0.844937226155,0.871522006205,False,nadal
+Rafael Nadal,Hard,service_point_win_pct,65.9614187928,%,11660,17677,216,64.9050947776,66.9984577932,False,nadal
+Rafael Nadal,Hard,return_point_win_pct,38.1510560655,%,6900,18086,214,37.2858210254,39.0334895201,False,nadal
+Rafael Nadal,Hard,ace_pct,4.78587995701,%,846,17677,216,4.31201232591,5.28666345372,False,nadal
+Rafael Nadal,Hard,approach_frequency_pct,6.9199057715,%,2350,33960,206,6.38922708837,7.4994467709,False,nadal
+Rafael Nadal,Hard,net_point_frequency_pct,8.95484018395,%,3135,35009,212,8.39631272724,9.55102479891,False,nadal
+Rafael Nadal,Hard,serve_volley_frequency_pct,1.79545454545,%,316,17600,215,1.41610446896,2.21309089429,False,nadal
+Rafael Nadal,Hard,drop_shot_share_pct,0.553483335339,%,414,74799,218,0.483797186509,0.627762835622,False,nadal
+Rafael Nadal,Hard,slice_share_pct,11.1966737523,%,8375,74799,218,10.4338797045,11.9445606873,False,nadal
+Rafael Nadal,Hard,short_rally_share_pct,61.507421412,%,21797,35438,218,60.4217975238,62.5001768745,False,nadal
+Rafael Nadal,Hard,long_rally_share_pct,14.7779220046,%,5237,35438,218,14.0658896423,15.5853101412,False,nadal
+Rafael Nadal,Hard,source_winner_rate_pct,14.7133594219,%,5151,35009,212,14.1084825667,15.301506223,False,nadal
+Rafael Nadal,Hard,source_unforced_error_rate_pct,14.0421034591,%,4916,35009,212,13.4186139472,14.660774823,False,nadal
+Rafael Nadal,Hard,net_point_success_pct,74.4497607656,%,2334,3135,212,72.8023481715,76.143333977,False,nadal
+Rafael Nadal,Hard,groundstroke_share_pct,84.3986042967,%,63131,74801,218,83.6487466397,85.1615233624,False,nadal
+Rafael Nadal,Hard,shot_family_diversity,0.270121237046,index (0–1),,74799,218,0.261952556169,0.278157424477,False,nadal
+Rafael Nadal,Hard,directional_diversity,0.855876092877,index (0–1),,51709,217,0.848820839964,0.863623589223,False,nadal
+Novak Djokovic,Overall,service_point_win_pct,66.8995152049,%,30359,45380,549,66.295199954,67.5170168292,False,djokovic
+Novak Djokovic,Overall,return_point_win_pct,40.4478626668,%,19038,47068,547,39.8607940901,41.0411835193,False,djokovic
+Novak Djokovic,Overall,ace_pct,7.19479947113,%,3265,45380,549,6.81276210411,7.59002263588,False,djokovic
+Novak Djokovic,Overall,approach_frequency_pct,9.0466287824,%,8135,89923,533,8.65575016932,9.4523969646,False,djokovic
+Novak Djokovic,Overall,net_point_frequency_pct,11.9705200361,%,10996,91859,545,11.5369383868,12.4029625842,False,djokovic
+Novak Djokovic,Overall,serve_volley_frequency_pct,2.47245482591,%,1122,45380,549,2.14620710767,2.81926073248,False,djokovic
+Novak Djokovic,Overall,drop_shot_share_pct,1.54661100779,%,3127,202184,552,1.45413166571,1.64472559626,False,djokovic
+Novak Djokovic,Overall,slice_share_pct,8.46802912199,%,17121,202184,552,8.07199483325,8.8566717099,False,djokovic
+Novak Djokovic,Overall,short_rally_share_pct,60.2817400549,%,54432,90296,552,59.6063408893,60.9838987596,False,djokovic
+Novak Djokovic,Overall,long_rally_share_pct,16.2753610348,%,14696,90296,552,15.7779747203,16.808050927,False,djokovic
+Novak Djokovic,Overall,source_winner_rate_pct,15.8777216702,%,14621,92085,546,15.4967903009,16.2636994428,False,djokovic
+Novak Djokovic,Overall,source_unforced_error_rate_pct,15.6355541076,%,14398,92085,546,15.2186585757,16.0709810781,False,djokovic
+Novak Djokovic,Overall,net_point_success_pct,70.2492070684,%,7752,11035,547,69.2945128508,71.2390588516,False,djokovic
+Novak Djokovic,Overall,groundstroke_share_pct,85.2949176347,%,172474,202209,552,84.8511638255,85.73258037,False,djokovic
+Novak Djokovic,Overall,shot_family_diversity,0.279797594495,index (0–1),,202184,552,0.273738530509,0.285591333979,False,djokovic
+Novak Djokovic,Overall,directional_diversity,0.830389146613,index (0–1),,138901,549,0.826755384623,0.834264525569,False,djokovic
+Novak Djokovic,Clay,service_point_win_pct,64.0758471792,%,6826,10653,127,62.7805875741,65.4152684597,False,djokovic
+Novak Djokovic,Clay,return_point_win_pct,41.073726788,%,4468,10878,127,39.9243582142,42.2273146712,False,djokovic
+Novak Djokovic,Clay,ace_pct,4.89064113395,%,521,10653,127,4.40540072653,5.40806721689,False,djokovic
+Novak Djokovic,Clay,approach_frequency_pct,8.80952380952,%,1813,20580,122,7.87522109042,9.80253650149,False,djokovic
+Novak Djokovic,Clay,net_point_frequency_pct,12.3504854824,%,2633,21319,126,11.2955878762,13.4989203284,False,djokovic
+Novak Djokovic,Clay,serve_volley_frequency_pct,1.89617947996,%,202,10653,127,1.41396869667,2.49530661215,False,djokovic
+Novak Djokovic,Clay,drop_shot_share_pct,2.37500959988,%,1237,52084,129,2.14467402478,2.62117551084,False,djokovic
+Novak Djokovic,Clay,slice_share_pct,5.37785116351,%,2801,52084,129,4.99207192052,5.82089204517,False,djokovic
+Novak Djokovic,Clay,short_rally_share_pct,55.7234711597,%,11873,21307,129,54.467454025,57.1444357881,False,djokovic
+Novak Djokovic,Clay,long_rally_share_pct,18.6558408035,%,3975,21307,129,17.5442986786,19.693758298,False,djokovic
+Novak Djokovic,Clay,source_winner_rate_pct,16.2671795112,%,3468,21319,126,15.5432667327,17.0076420303,False,djokovic
+Novak Djokovic,Clay,source_unforced_error_rate_pct,17.2662882874,%,3681,21319,126,16.3591691109,18.1443274632,False,djokovic
+Novak Djokovic,Clay,net_point_success_pct,69.387755102,%,1836,2646,127,67.4905292565,71.3467107187,False,djokovic
+Novak Djokovic,Clay,groundstroke_share_pct,87.6521171638,%,45665,52098,129,86.9466812727,88.2851098518,False,djokovic
+Novak Djokovic,Clay,shot_family_diversity,0.257493653633,index (0–1),,52084,129,0.246516985889,0.269222019432,False,djokovic
+Novak Djokovic,Clay,directional_diversity,0.839394355512,index (0–1),,36480,129,0.830731263832,0.849121967909,False,djokovic
+Novak Djokovic,Grass,service_point_win_pct,68.8335258208,%,4172,6061,58,67.2939151846,70.3044893253,False,djokovic
+Novak Djokovic,Grass,return_point_win_pct,37.6802507837,%,2404,6380,58,35.9703860004,39.4699971428,False,djokovic
+Novak Djokovic,Grass,ace_pct,9.27239729418,%,562,6061,58,8.01526987929,10.5793407718,False,djokovic
+Novak Djokovic,Grass,approach_frequency_pct,10.3358083024,%,1225,11852,55,9.26485806319,11.4956507573,False,djokovic
+Novak Djokovic,Grass,net_point_frequency_pct,12.5472228921,%,1561,12441,58,11.3486851856,13.8249080849,False,djokovic
+Novak Djokovic,Grass,serve_volley_frequency_pct,3.48127371721,%,211,6061,58,2.33554247179,4.79335675558,False,djokovic
+Novak Djokovic,Grass,drop_shot_share_pct,1.43609789259,%,338,23536,58,1.21000389339,1.65457417362,False,djokovic
+Novak Djokovic,Grass,slice_share_pct,12.3427940177,%,2905,23536,58,11.0018514086,13.7961930097,False,djokovic
+Novak Djokovic,Grass,short_rally_share_pct,65.669787093,%,7927,12071,58,63.8805603243,67.4664705362,False,djokovic
+Novak Djokovic,Grass,long_rally_share_pct,12.6998591666,%,1533,12071,58,11.4664493271,13.8873101548,False,djokovic
+Novak Djokovic,Grass,source_winner_rate_pct,16.3330921952,%,2032,12441,58,15.1066950563,17.7853477594,False,djokovic
+Novak Djokovic,Grass,source_unforced_error_rate_pct,13.8815207781,%,1727,12441,58,12.8158978351,14.998064337,False,djokovic
+Novak Djokovic,Grass,net_point_success_pct,72.0051249199,%,1124,1561,58,69.6438782357,74.2533390688,False,djokovic
+Novak Djokovic,Grass,groundstroke_share_pct,80.801257541,%,19019,23538,58,79.1160622243,82.3843793518,False,djokovic
+Novak Djokovic,Grass,shot_family_diversity,0.327513565962,index (0–1),,23536,58,0.309279209495,0.345380728759,False,djokovic
+Novak Djokovic,Grass,directional_diversity,0.822726242457,index (0–1),,15240,58,0.813286896635,0.831046847995,False,djokovic
+Novak Djokovic,Hard,service_point_win_pct,67.5399427894,%,19361,28666,364,66.7684807256,68.2905897318,False,djokovic
+Novak Djokovic,Hard,return_point_win_pct,40.8118081181,%,12166,29810,362,40.0344460057,41.5747710571,False,djokovic
+Novak Djokovic,Hard,ace_pct,7.6118049257,%,2182,28666,364,7.17205252396,8.10315832501,False,djokovic
+Novak Djokovic,Hard,approach_frequency_pct,8.86573550643,%,5097,57491,356,8.40867415682,9.35016103036,False,djokovic
+Novak Djokovic,Hard,net_point_frequency_pct,11.7076025405,%,6802,58099,361,11.1955583627,12.2361146833,False,djokovic
+Novak Djokovic,Hard,serve_volley_frequency_pct,2.47331333287,%,709,28666,364,2.06200820213,2.88808074236,False,djokovic
+Novak Djokovic,Hard,drop_shot_share_pct,1.22625707152,%,1552,126564,365,1.13400831431,1.31624889827,False,djokovic
+Novak Djokovic,Hard,slice_share_pct,9.0191523656,%,11415,126564,365,8.58478328429,9.45587932596,False,djokovic
+Novak Djokovic,Hard,short_rally_share_pct,60.8454267543,%,34632,56918,365,60.0481895434,61.6181078901,False,djokovic
+Novak Djokovic,Hard,long_rally_share_pct,16.1425208194,%,9188,56918,365,15.533632909,16.8025657552,False,djokovic
+Novak Djokovic,Hard,source_winner_rate_pct,15.6382340334,%,9121,58325,362,15.148374456,16.1064997192,False,djokovic
+Novak Djokovic,Hard,source_unforced_error_rate_pct,15.4136305186,%,8990,58325,362,14.8838472519,15.9488030125,False,djokovic
+Novak Djokovic,Hard,net_point_success_pct,70.1816051552,%,4792,6828,362,68.9400105151,71.4443632347,False,djokovic
+Novak Djokovic,Hard,groundstroke_share_pct,85.1603422531,%,107790,126573,365,84.6596075681,85.6858493828,False,djokovic
+Novak Djokovic,Hard,shot_family_diversity,0.277306124942,index (0–1),,126564,365,0.270219209494,0.283845040953,False,djokovic
+Novak Djokovic,Hard,directional_diversity,0.827410992091,index (0–1),,87181,362,0.823416712254,0.831246075634,False,djokovic

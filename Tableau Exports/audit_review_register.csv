@@ -1,0 +1,5 @@
+issue,count,next_action
+Numerical statistical field flags (not distinct rows),12138,Unavailable percentages retained; count/rate eligibility applied in Sections IV–VIII
+Metadata field flags,97,Handle handedness/format unknowns only in metrics requiring these fields
+Point-state flags,3,Invalid score/state points excluded from validated event cohorts
+Gapped/nonunit-start point sequences,0,Terminal-score and event-completeness rules applied in Section IV

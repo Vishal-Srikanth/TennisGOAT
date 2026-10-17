@@ -1,0 +1,16 @@
+scenario,comparison,point_score_difference,ci95_lower,ci95_upper,bootstrap_a_ahead_pct
+Balanced,Roger Federer minus Rafael Nadal,4.560203677,0.876946006453,8.76203523214,99.05
+Balanced,Roger Federer minus Novak Djokovic,0.247349420429,-2.97170949422,3.69838281522,58.8
+Balanced,Rafael Nadal minus Novak Djokovic,-4.31285425657,-8.64876836021,-0.395806966609,1.45
+Winning priority,Roger Federer minus Rafael Nadal,5.34145995799,1.25529344779,9.76464426779,99.55
+Winning priority,Roger Federer minus Novak Djokovic,0.963352778923,-2.63827127567,4.71729248133,71.8
+Winning priority,Rafael Nadal minus Novak Djokovic,-4.37810717907,-9.14657175348,-0.0285641640323,2.5
+Dominance priority,Roger Federer minus Rafael Nadal,3.72266702465,1.06642141522,6.65125419355,99.7
+Dominance priority,Roger Federer minus Novak Djokovic,0.636354388809,-1.68005480785,3.0801403042,73.3
+Dominance priority,Rafael Nadal minus Novak Djokovic,-3.08631263584,-6.14170061295,-0.280040071117,1.65
+Clutch priority,Roger Federer minus Rafael Nadal,4.14895940065,0.415662612218,8.16744666439,98.65
+Clutch priority,Roger Federer minus Novak Djokovic,0.11501385493,-3.12974329958,3.4791230869,54.7
+Clutch priority,Rafael Nadal minus Novak Djokovic,-4.03394554572,-8.16764311421,-0.105076262172,1.95
+Adaptability priority,Roger Federer minus Rafael Nadal,5.4183564652,0.305847945971,11.9585859567,98.2
+Adaptability priority,Roger Federer minus Novak Djokovic,-0.367321661699,-4.69943942534,4.5615678755,48.7
+Adaptability priority,Rafael Nadal minus Novak Djokovic,-5.7856781269,-12.1552102758,-0.447818062763,1.65

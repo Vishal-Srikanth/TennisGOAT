@@ -1,0 +1,19 @@
+player,period_index,period,start_year,end_year,nominal_years,coverage_edge,first_charted_date,last_charted_date,charted_matches,player_id
+Roger Federer,0,1998–2001,1998,2001,4,True,1998-07-04,2001-12-14,32,federer
+Roger Federer,1,2002–2005,2002,2005,4,False,2002-01-12,2005-11-19,162,federer
+Roger Federer,2,2006–2009,2006,2009,4,False,2006-01-06,2009-11-28,170,federer
+Roger Federer,3,2010–2013,2010,2013,4,False,2010-01-08,2013-11-05,134,federer
+Roger Federer,4,2014–2017,2014,2017,4,False,2014-01-01,2017-10-29,126,federer
+Roger Federer,5,2018–2021,2018,2021,4,True,2018-01-16,2021-07-05,99,federer
+Rafael Nadal,0,2003–2006,2003,2006,4,True,2003-05-15,2006-11-17,38,nadal
+Rafael Nadal,1,2007–2010,2007,2010,4,False,2007-01-16,2010-11-28,96,nadal
+Rafael Nadal,2,2011–2014,2011,2014,4,False,2011-01-07,2014-07-01,111,nadal
+Rafael Nadal,3,2015–2018,2015,2018,4,False,2015-01-05,2018-09-07,104,nadal
+Rafael Nadal,4,2019–2022,2019,2022,4,False,2019-01-22,2022-11-17,62,nadal
+Rafael Nadal,5,2023–2024,2023,2024,4,True,2023-01-16,2024-11-19,14,nadal
+Novak Djokovic,0,2005–2008,2005,2008,4,True,2005-01-17,2008-11-16,50,djokovic
+Novak Djokovic,1,2009–2012,2009,2012,4,False,2009-01-27,2012-11-12,106,djokovic
+Novak Djokovic,2,2013–2016,2013,2016,4,False,2013-01-13,2016-11-20,132,djokovic
+Novak Djokovic,3,2017–2020,2017,2020,4,False,2017-01-07,2020-11-21,79,djokovic
+Novak Djokovic,4,2021–2024,2021,2024,4,False,2021-02-10,2024-12-31,143,djokovic
+Novak Djokovic,5,2025–2026,2025,2026,4,True,2025-01-02,2026-03-11,43,djokovic

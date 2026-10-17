@@ -1,0 +1,22 @@
+relative_path,bytes,sha256,raw_rows,role
+Raw Data/MatchChart 0.3.2.xlsm,482316,46e2349eee512296a86170449f6e463a6be91be9261a0c7b6b5d5a25c006729f,,local interpretation reference
+Raw Data/charting-m-matches.csv,1141817,d8dce1ad8d12c04efa01da587441b54ece8e8100530660528312244f632efe80,7566,analysis CSV
+Raw Data/charting-m-points-2010s.csv,36475702,2719cdc136b64698f24b360cf4f60302e11add24971c2fdd585e1b729178db8c,357229,analysis CSV
+Raw Data/charting-m-points-2020s.csv,56590483,2cd43f73e0530a47ea4c02b99dae40177ca6d58a8ccf9189358eb05dffb4be9a,547478,analysis CSV
+Raw Data/charting-m-points-to-2009.csv,38025307,12613c7fc4d7acc6d4577ec33554a4308497a5e18669560688f1a2e00704fc72,379569,analysis CSV
+Raw Data/charting-m-stats-KeyPointsReturn.csv,5351478,817cebdd70f81a57b699cbd15a89313f1e76c7bfccae73e639a8dce101a5e697,60464,analysis CSV
+Raw Data/charting-m-stats-KeyPointsServe.csv,5832013,a2cec9bfe6cb98545895ea100c4fd77900c8febfb9d34c6d63326999f5dcd8f0,60464,analysis CSV
+Raw Data/charting-m-stats-NetPoints.csv,6184262,239540c77767512921153a05d8e320450524b6a06976c5bf0d496268a2dee0e8,59396,analysis CSV
+Raw Data/charting-m-stats-Overview.csv,6651805,9b08d763e1209dec276206998b96823731f0351ab9b86d25415a7e3dd313290c,56850,analysis CSV
+Raw Data/charting-m-stats-Rally.csv,10974130,39fca5a5f930a7a3444d00533016baa764ec37ce43d0a06aa07b713f38d6b498,96706,analysis CSV
+Raw Data/charting-m-stats-ReturnDepth.csv,25626585,2a014083db4ba0daaa56f8cc95c6c473058464f5396a8c4dc0c7a4070581132e,270002,analysis CSV
+Raw Data/charting-m-stats-ReturnOutcomes.csv,29894791,6573360d5629d4ccbe4fa35269f8090aca2797fdb895ed95695d9e9514d0f1ea,310496,analysis CSV
+Raw Data/charting-m-stats-ServeBasics.csv,4482664,5336ad5a021b482c50529ccc78043518b3ce75ca011ef1562a27683c45fffb0d,45341,analysis CSV
+Raw Data/charting-m-stats-ServeDirection.csv,4663213,991a437b8af0d69176671e91f9c6c0429fc6060bc6fb0cb741d88ab071bc14fe,45341,analysis CSV
+Raw Data/charting-m-stats-ServeInfluence.csv,4123579,abeabf1751d6fb89656d68603c936515d15095929bdcca2adfc0b89788f09b57,30235,analysis CSV
+Raw Data/charting-m-stats-ShotDirOutcomes.csv,16221892,46f1862bc3f77af62a58e4250f05bb86469e9c59ecfd0f0174fe669a4e84b4f8,174687,analysis CSV
+Raw Data/charting-m-stats-ShotDirection.csv,5263874,9934dffead433d3853b65ff65eda41017bb80623f2a890238a93209e43397043,59997,analysis CSV
+Raw Data/charting-m-stats-SnV.csv,5323961,015b46349823b1af14b75c54c5001b940bd1bb5db7e02031ede106a781d89fe3,51300,analysis CSV
+Raw Data/charting-m-stats-SvBreakSplit.csv,16575752,293d8495765885892e05a1aebc6ce25273b53bfe709f014fc09c32babf65646a,164871,analysis CSV
+Raw Data/charting-m-stats-SvBreakTotal.csv,15346433,298ff58e2259194ba19f0f8ebb75c6295a2887f6c6c1f7989f720a2ccb04516b,164871,analysis CSV
+Raw Data/data_dictionary.txt,2649,e60154eb0289e4e0e11221e62c60dcfc94e9d6e4d4a889aa065a7c17bf42b238,,local interpretation reference

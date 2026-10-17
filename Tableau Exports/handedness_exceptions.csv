@@ -1,0 +1,8 @@
+match_id,player,source_column,raw_representation,normalized_hand,hand_code,exception_type,player_id
+20210210-M-Australian_Open-R64-Novak_Djokovic-Francis_Tiafoe,Novak Djokovic,Pl 1 hand,nan,,R,missing/unrecognized,djokovic
+20190122-M-Australian_Open-QF-Rafael_Nadal-Francis_Tiafoe,Rafael Nadal,Pl 1 hand,nan,,L,missing/unrecognized,nadal
+20170611-M-Roland_Garros-F-Rafael_Nadal-Stan_Wawrinka,Rafael Nadal,Pl 1 hand,'R',R,L,contradicts adjudicated player profile,nadal
+20170327-M-Miami_Masters-R32-Roger_Federer-Juan_Martin_Del_Potro,Roger Federer,Pl 1 hand,nan,,R,missing/unrecognized,federer
+20140624-M-Wimbledon-R128-Rafael_Nadal-Martin_Klizan,Rafael Nadal,Pl 1 hand,nan,,L,missing/unrecognized,nadal
+20100831-M-US_Open-R128-Teymuraz_Gabashvili-Rafael_Nadal,Rafael Nadal,Pl 2 hand,'R',R,L,contradicts adjudicated player profile,nadal
+20100512-M-Madrid_Masters-R16-John_Isner-Rafael_Nadal,Rafael Nadal,Pl 2 hand,'R',R,L,contradicts adjudicated player profile,nadal

@@ -1,0 +1,21 @@
+scenario,metric,weight
+Balanced,winning,0.25
+Winning priority,winning,0.55
+Dominance priority,winning,0.2
+Clutch priority,winning,0.2
+Adaptability priority,winning,0.2
+Balanced,dominance,0.25
+Winning priority,dominance,0.15
+Dominance priority,dominance,0.5
+Clutch priority,dominance,0.15
+Adaptability priority,dominance,0.15
+Balanced,clutch,0.25
+Winning priority,clutch,0.15
+Dominance priority,clutch,0.15
+Clutch priority,clutch,0.5
+Adaptability priority,clutch,0.15
+Balanced,adaptability,0.25
+Winning priority,adaptability,0.15
+Dominance priority,adaptability,0.15
+Clutch priority,adaptability,0.15
+Adaptability priority,adaptability,0.5

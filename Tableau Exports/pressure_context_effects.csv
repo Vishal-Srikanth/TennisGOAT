@@ -1,0 +1,3 @@
+model,opponent_proxy_change,conditional_odds_ratio,ci95_lower,ci95_upper,interpretation
+BP save,+10 percentage points,0.653337111239,0.559201218765,0.763319833003,"retrospective association; unadjusted interval, not a player contrast"
+TB point,+10 percentage points,0.800201594464,0.666689908977,0.960450403044,"retrospective association; unadjusted interval, not a player contrast"

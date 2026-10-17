@@ -1,0 +1,61 @@
+scenario,player,metric,weight,fixed_scale_value,score_contribution,player_id
+Balanced,Roger Federer,winning,0.25,0.788434414669,19.7108603667,federer
+Balanced,Roger Federer,dominance,0.25,0.560853191775,14.0213297944,federer
+Balanced,Roger Federer,clutch,0.25,0.638749735448,15.9687433862,federer
+Balanced,Roger Federer,adaptability,0.25,0.838100922326,20.9525230581,federer
+Balanced,Rafael Nadal,winning,0.25,0.723300970874,18.0825242718,nadal
+Balanced,Rafael Nadal,dominance,0.25,0.541970974647,13.5492743662,nadal
+Balanced,Rafael Nadal,clutch,0.25,0.607687736149,15.1921934037,nadal
+Balanced,Rafael Nadal,adaptability,0.25,0.770770435468,19.2692608867,nadal
+Balanced,Novak Djokovic,winning,0.25,0.768060836502,19.2015209125,djokovic
+Balanced,Novak Djokovic,dominance,0.25,0.549822424754,13.7455606189,djokovic
+Balanced,Novak Djokovic,clutch,0.25,0.642614412253,16.0653603063,djokovic
+Balanced,Novak Djokovic,adaptability,0.25,0.855746613891,21.3936653473,djokovic
+Winning priority,Roger Federer,winning,0.55,0.788434414669,43.3638928068,federer
+Winning priority,Roger Federer,dominance,0.15,0.560853191775,8.41279787662,federer
+Winning priority,Roger Federer,clutch,0.15,0.638749735448,9.58124603172,federer
+Winning priority,Roger Federer,adaptability,0.15,0.838100922326,12.5715138349,federer
+Winning priority,Rafael Nadal,winning,0.55,0.723300970874,39.7815533981,nadal
+Winning priority,Rafael Nadal,dominance,0.15,0.541970974647,8.12956461971,nadal
+Winning priority,Rafael Nadal,clutch,0.15,0.607687736149,9.11531604223,nadal
+Winning priority,Rafael Nadal,adaptability,0.15,0.770770435468,11.561556532,nadal
+Winning priority,Novak Djokovic,winning,0.55,0.768060836502,42.2433460076,djokovic
+Winning priority,Novak Djokovic,dominance,0.15,0.549822424754,8.24733637132,djokovic
+Winning priority,Novak Djokovic,clutch,0.15,0.642614412253,9.63921618379,djokovic
+Winning priority,Novak Djokovic,adaptability,0.15,0.855746613891,12.8361992084,djokovic
+Dominance priority,Roger Federer,winning,0.2,0.788434414669,15.7686882934,federer
+Dominance priority,Roger Federer,dominance,0.5,0.560853191775,28.0426595887,federer
+Dominance priority,Roger Federer,clutch,0.15,0.638749735448,9.58124603172,federer
+Dominance priority,Roger Federer,adaptability,0.15,0.838100922326,12.5715138349,federer
+Dominance priority,Rafael Nadal,winning,0.2,0.723300970874,14.4660194175,nadal
+Dominance priority,Rafael Nadal,dominance,0.5,0.541970974647,27.0985487324,nadal
+Dominance priority,Rafael Nadal,clutch,0.15,0.607687736149,9.11531604223,nadal
+Dominance priority,Rafael Nadal,adaptability,0.15,0.770770435468,11.561556532,nadal
+Dominance priority,Novak Djokovic,winning,0.2,0.768060836502,15.36121673,djokovic
+Dominance priority,Novak Djokovic,dominance,0.5,0.549822424754,27.4911212377,djokovic
+Dominance priority,Novak Djokovic,clutch,0.15,0.642614412253,9.63921618379,djokovic
+Dominance priority,Novak Djokovic,adaptability,0.15,0.855746613891,12.8361992084,djokovic
+Clutch priority,Roger Federer,winning,0.2,0.788434414669,15.7686882934,federer
+Clutch priority,Roger Federer,dominance,0.15,0.560853191775,8.41279787662,federer
+Clutch priority,Roger Federer,clutch,0.5,0.638749735448,31.9374867724,federer
+Clutch priority,Roger Federer,adaptability,0.15,0.838100922326,12.5715138349,federer
+Clutch priority,Rafael Nadal,winning,0.2,0.723300970874,14.4660194175,nadal
+Clutch priority,Rafael Nadal,dominance,0.15,0.541970974647,8.12956461971,nadal
+Clutch priority,Rafael Nadal,clutch,0.5,0.607687736149,30.3843868074,nadal
+Clutch priority,Rafael Nadal,adaptability,0.15,0.770770435468,11.561556532,nadal
+Clutch priority,Novak Djokovic,winning,0.2,0.768060836502,15.36121673,djokovic
+Clutch priority,Novak Djokovic,dominance,0.15,0.549822424754,8.24733637132,djokovic
+Clutch priority,Novak Djokovic,clutch,0.5,0.642614412253,32.1307206126,djokovic
+Clutch priority,Novak Djokovic,adaptability,0.15,0.855746613891,12.8361992084,djokovic
+Adaptability priority,Roger Federer,winning,0.2,0.788434414669,15.7686882934,federer
+Adaptability priority,Roger Federer,dominance,0.15,0.560853191775,8.41279787662,federer
+Adaptability priority,Roger Federer,clutch,0.15,0.638749735448,9.58124603172,federer
+Adaptability priority,Roger Federer,adaptability,0.5,0.838100922326,41.9050461163,federer
+Adaptability priority,Rafael Nadal,winning,0.2,0.723300970874,14.4660194175,nadal
+Adaptability priority,Rafael Nadal,dominance,0.15,0.541970974647,8.12956461971,nadal
+Adaptability priority,Rafael Nadal,clutch,0.15,0.607687736149,9.11531604223,nadal
+Adaptability priority,Rafael Nadal,adaptability,0.5,0.770770435468,38.5385217734,nadal
+Adaptability priority,Novak Djokovic,winning,0.2,0.768060836502,15.36121673,djokovic
+Adaptability priority,Novak Djokovic,dominance,0.15,0.549822424754,8.24733637132,djokovic
+Adaptability priority,Novak Djokovic,clutch,0.15,0.642614412253,9.63921618379,djokovic
+Adaptability priority,Novak Djokovic,adaptability,0.5,0.855746613891,42.7873306946,djokovic
