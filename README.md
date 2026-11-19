@@ -1,9 +1,7 @@
 # Who is the GOAT of Tennis?
 ### Federer. Nadal. Djokovic. Three extraordinary careers. One difficult question.
 
-* **Check out my Tableau Dashboard** ([Tableau Dashboard](https://public.tableau.com/app/profile/vishal.srikanth/viz/WhoistheGOATofTennis/02KPICommandCenter2))
-  * *Tech:* Python, Jupyter Notebook, Custom Statistical Formulas
-  * Engineered statistical data models to determine the greatest tennis player of all time using custom metrics measuring Surface Adaptability, Clutch Index, and Dominance Ratio across Federer, Nadal, and Djokovic.
+**Check out my Tableau Dashboard** ([Tableau Dashboard](https://public.tableau.com/app/profile/vishal.srikanth/viz/WhoistheGOATofTennis/02KPICommandCenter2))
 
 > **What happens when the greatest debate in tennis is examined point by point, rather than decided by a single trophy count?**
 
